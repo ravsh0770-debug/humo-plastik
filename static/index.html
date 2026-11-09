@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>HUMO PLASTIK — selofan paketlar ishlab chiqaruvchidan</title>
+  <meta name="description" content="Mayka, fasovka, zip-lock, doy-pak, logotipli paketlar, musor paketlari va PP qoplar — to'g'ridan-to'g'ri ishlab chiqaruvchidan ulgurji narxlarda.">
+  <meta property="og:title" content="HUMO PLASTIK — paketlar ishlab chiqaruvchidan">
+  <meta property="og:image" content="/img/hero.jpg">
+
+  <!-- Ilova (PWA) -->
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#0b1b2e">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="HUMO">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="container header__in">
+    <a href="#top" class="logo" aria-label="HUMO PLASTIK">
+      <span class="logo__mark"><svg viewBox="0 0 32 32"><path d="M4 20c6-1 9-5 12-12 3 7 6 11 12 12-5 1-8 3-12 8-4-5-7-7-12-8Z" fill="currentColor"/></svg></span>
+      <span class="logo__text">HUMO<b>PLASTIK</b></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#katalog" data-i18n="nav.catalog">Katalog</a>
+      <a href="#ishlab-chiqarish" data-i18n="nav.production">Ishlab chiqarish</a>
+      <a href="#kalkulyator" data-i18n="nav.calc">Kalkulyator</a>
+      <a href="#savollar" data-i18n="nav.faq">Savollar</a>
+      <a href="#aloqa" data-i18n="nav.contact">Aloqa</a>
+    </nav>
+    <div class="header__act">
+      <a class="header__phone" data-phone href="tel:+998900000000">+998 90 000 00 00</a>
+      <div class="lang" id="lang">
+        <button class="lang__btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Til / Language">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+          <span id="langCur">UZ</span>
+          <svg class="lang__chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="lang__menu" role="menu">
+          <button role="menuitem" data-lang="uz"><span class="lang__code">UZ</span>O'zbekcha</button>
+          <button role="menuitem" data-lang="ru"><span class="lang__code">RU</span>Русский</button>
+          <button role="menuitem" data-lang="en"><span class="lang__code">EN</span>English</button>
+        </div>
+      </div>
+      <button class="cart-btn" id="cartOpen" aria-label="Savat">
+        <svg viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-12L5 3H2"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg>
+        <span class="cart-btn__count" data-cart-count>0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container hero__grid">
+    <div class="hero__text">
+      <span class="eyebrow"><i class="dot"></i> <span data-i18n="hero.eyebrow">To'g'ridan-to'g'ri ishlab chiqaruvchidan</span></span>
+      <h1 data-i18n-html="hero.title">Selofan paketlar <span class="hl">zavod narxida</span> — ulgurji va buyurtma asosida</h1>
+      <p class="lead" data-i18n="hero.lead">Mayka, fasovka, zip-lock, doy-pak va logotipli paketlar. Birlamchi xomashyo, zamonaviy turk uskunalari va 3 kundan boshlab tayyor buyurtma.</p>
+      <div class="hero__cta">
+        <a href="#katalog" class="btn btn--primary"><span data-i18n="hero.cta1">Katalogni ko'rish</span>
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#aloqa" class="btn btn--ghost" data-i18n="hero.cta2">Narx so'rash</a>
+      </div>
+      <ul class="hero__ticks">
+        <li><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg><span data-i18n="hero.t1">Bepul dizayn</span></li>
+        <li><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg><span data-i18n="hero.t2">Toshkent bo'ylab bepul yetkazish</span></li>
+        <li><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg><span data-i18n="hero.t3">Sertifikatlangan</span></li>
+      </ul>
+    </div>
+    <div class="hero__media">
+      <div class="hero__img"><img src="/img/hero.jpg" alt="" fetchpriority="high"></div>
+      <div class="float-card float-card--a">
+        <img src="/img/rolls.jpg" alt="">
+        <div><b data-i18n="hero.fa_b">300 t</b><span data-i18n="hero.fa_s">oyiga ishlab chiqarish</span></div>
+      </div>
+      <div class="float-card float-card--b">
+        <span class="float-card__ic"><svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <div><b data-i18n="hero.fb_b">100% birlamchi</b><span data-i18n="hero.fb_s">xomashyo, hidsiz</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="stats">
+      <div class="stat"><b data-count="10">0</b><span data-i18n="stats.1">yillik tajriba</span></div>
+      <div class="stat"><b data-count="1500">0</b><span data-i18n="stats.2">doimiy mijozlar</span></div>
+      <div class="stat"><b data-count="40">0</b><span data-i18n="stats.3">turdagi mahsulot</span></div>
+      <div class="stat"><b data-count="3">0</b><span data-i18n="stats.4">kunda tayyor buyurtma</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee__track" id="marquee"></div></div>
+
+<!-- ============ KATALOG ============ -->
+<section class="section" id="katalog">
+  <div class="container">
+    <div class="section__head">
+      <div>
+        <span class="eyebrow" data-i18n="cat.eyebrow">Katalog</span>
+        <h2 data-i18n="cat.title">Mahsulotlarimiz</h2>
+        <p class="muted" data-i18n="cat.note">Narxlar ulgurji, QQS bilan. Katta hajmga qo'shimcha chegirma beriladi.</p>
+      </div>
+      <div class="tabs" id="tabs">
+        <button class="tab is-active" data-cat="all" data-i18n="tab.all">Hammasi</button>
+        <button class="tab" data-cat="paket" data-i18n="tab.paket">Paketlar</button>
+        <button class="tab" data-cat="qadoq" data-i18n="tab.qadoq">Qadoqlash</button>
+        <button class="tab" data-cat="sanoat" data-i18n="tab.sanoat">Sanoat / xo'jalik</button>
+      </div>
+    </div>
+    <div class="grid" id="products"></div>
+  </div>
+</section>
+
+<!-- ============ ISHLAB CHIQARISH ============ -->
+<section class="section section--dark" id="ishlab-chiqarish">
+  <div class="container">
+    <div class="banner">
+      <img src="/img/factory.jpg" alt="" loading="lazy">
+      <div class="banner__txt">
+        <span class="eyebrow eyebrow--light" data-i18n="prod.eyebrow">Ishlab chiqarish</span>
+        <h2 data-i18n="prod.title">O'z zavodimiz — o'rtakashsiz narx</h2>
+        <p data-i18n="prod.text">Ekstruziyadan tortib pechat va kesishgacha — barcha jarayon bir joyda. Shu sababli sifatni nazorat qilamiz va narxni past ushlaymiz.</p>
+      </div>
+    </div>
+    <div class="steps">
+      <article class="step">
+        <span class="step__n">01</span>
+        <h3 data-i18n="step1.t">Xomashyo</h3>
+        <p data-i18n="step1.d">Faqat birlamchi LDPE / HDPE granulalari. Har partiya laboratoriyada tekshiriladi.</p>
+      </article>
+      <article class="step step--img">
+        <img src="/img/rolls.jpg" alt="" loading="lazy">
+        <div><span class="step__n">02</span><h3 data-i18n="step2.t">Ekstruziya</h3><p data-i18n="step2.d">7 dan 200 mikrongacha plyonka puflab olinadi.</p></div>
+      </article>
+      <article class="step">
+        <span class="step__n">03</span>
+        <h3 data-i18n="step3.t">Flekso pechat</h3>
+        <p data-i18n="step3.d">1–8 rangli pechat. Logotipingiz aniq, o'chmaydigan bo'yoqlar bilan.</p>
+      </article>
+      <article class="step step--img">
+        <img src="/img/line.jpg" alt="" loading="lazy">
+        <div><span class="step__n">04</span><h3 data-i18n="step4.t">Kesish va qadoqlash</h3><p data-i18n="step4.d">Avtomatik liniyada kesiladi, sanaladi va qadoqlanadi.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AFZALLIKLAR ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section__head section__head--center">
+      <span class="eyebrow" data-i18n="why.eyebrow">Nega aynan biz</span>
+      <h2 data-i18n="why.title">Ishonchli hamkor — har bir buyurtmada</h2>
+    </div>
+    <div class="features">
+      <div class="feature"><span class="feature__ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l5 3V8l5 3V4h4v17"/></svg></span><h3 data-i18n="f1.t">Ishlab chiqaruvchi narxi</h3><p data-i18n="f1.d">Vositachilarsiz — zavoddan to'g'ridan-to'g'ri sizga.</p></div>
+      <div class="feature"><span class="feature__ic"><svg viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r="1.5"/><circle cx="17.5" cy="10.5" r="1.5"/><circle cx="8.5" cy="7.5" r="1.5"/><circle cx="6.5" cy="12.5" r="1.5"/><path d="M12 2a10 10 0 0 0 0 20c1 0 2-.8 2-2 0-.5-.2-1-.5-1.3-.3-.4-.5-.8-.5-1.3 0-1.1.9-2 2-2h2.3A5.7 5.7 0 0 0 22 9.6C22 5.4 17.5 2 12 2Z"/></svg></span><h3 data-i18n="f2.t">Bepul dizayn</h3><p data-i18n="f2.d">Dizaynerimiz logotipingiz asosida maket tayyorlab beradi.</p></div>
+      <div class="feature"><span class="feature__ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3 data-i18n="f3.t">Tezkor muddat</h3><p data-i18n="f3.d">Standart paketlar — 1 kunda, logotipli buyurtma — 3–7 kunda.</p></div>
+      <div class="feature"><span class="feature__ic"><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span><h3 data-i18n="f4.t">Yetkazib berish</h3><p data-i18n="f4.d">Toshkent bo'ylab bepul, viloyatlarga — transport kompaniyalari orqali.</p></div>
+      <div class="feature"><span class="feature__ic"><svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg></span><h3 data-i18n="f5.t">Sifat kafolati</h3><p data-i18n="f5.d">Har bir partiya mustahkamlik va qalinlik bo'yicha tekshiriladi.</p></div>
+      <div class="feature"><span class="feature__ic"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></span><h3 data-i18n="f6.t">Istalgan hajm</h3><p data-i18n="f6.d">Kichik do'kondan yirik tarmoqqacha — moslashuvchan minimal buyurtma.</p></div>
+    </div>
+
+    <div class="industries">
+      <span class="muted" data-i18n="ind.label">Bizdan buyurtma beradi:</span>
+      <span class="chip" data-i18n="ind.1">Supermarketlar</span><span class="chip" data-i18n="ind.2">Nonvoyxonalar</span><span class="chip" data-i18n="ind.3">Restoran va kafe</span><span class="chip" data-i18n="ind.4">Dorixonalar</span><span class="chip" data-i18n="ind.5">Kiyim do'konlari</span><span class="chip" data-i18n="ind.6">Internet-do'konlar</span><span class="chip" data-i18n="ind.7">Oziq-ovqat zavodlari</span><span class="chip" data-i18n="ind.8">Qurilish kompaniyalari</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KALKULYATOR ============ -->
+<section class="section section--soft" id="kalkulyator">
+  <div class="container calc">
+    <div class="calc__info">
+      <span class="eyebrow" data-i18n="calc.eyebrow">Onlayn kalkulyator</span>
+      <h2 data-i18n="calc.title">Buyurtma narxini hoziroq hisoblang</h2>
+      <p class="muted" data-i18n="calc.text">Mahsulot va hajmni tanlang — taxminiy narxni ko'rasiz. Aniq narxni menejerimiz 15 daqiqa ichida tasdiqlaydi.</p>
+      <img src="/img/line.jpg" alt="" class="calc__img" loading="lazy">
+    </div>
+    <form class="card calc__form" id="calcForm" onsubmit="return false">
+      <label class="field">
+        <span data-i18n="calc.product">Mahsulot</span>
+        <select id="calcProduct"></select>
+      </label>
+      <label class="field">
+        <span><span data-i18n="calc.qty">Miqdor</span> (<b id="calcUnit">kg</b>)</span>
+        <input type="number" id="calcQty" min="1" inputmode="numeric">
+        <small class="hint" id="calcMin"></small>
+      </label>
+      <label class="check" id="calcLogoWrap">
+        <input type="checkbox" id="calcLogo">
+        <span><span data-i18n="calc.logo">Logotip pechati</span> (+<span class="logoPct">15</span>%)</span>
+      </label>
+      <div class="calc__total">
+        <span data-i18n="calc.total">Taxminiy narx</span>
+        <b id="calcTotal">0</b>
+        <small id="calcPer"></small>
+      </div>
+      <button type="button" class="btn btn--primary btn--block" id="calcAdd" data-i18n="calc.add">Savatga qo'shish</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ QANDAY BUYURTMA ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section__head section__head--center">
+      <span class="eyebrow" data-i18n="flow.eyebrow">Jarayon</span>
+      <h2 data-i18n="flow.title">Buyurtma 4 qadamda</h2>
+    </div>
+    <ol class="flow">
+      <li><b>1</b><h3 data-i18n="flow.1t">Tanlang</h3><p data-i18n="flow.1d">Katalogdan mahsulot, o'lcham va miqdorni tanlang.</p></li>
+      <li><b>2</b><h3 data-i18n="flow.2t">Yuboring</h3><p data-i18n="flow.2d">Savatdan buyurtmani yuboring — u darhol menejerga yetadi.</p></li>
+      <li><b>3</b><h3 data-i18n="flow.3t">Tasdiqlang</h3><p data-i18n="flow.3d">Menejer qo'ng'iroq qilib, maket va narxni kelishadi.</p></li>
+      <li><b>4</b><h3 data-i18n="flow.4t">Qabul qiling</h3><p data-i18n="flow.4d">Tayyor mahsulotni manzilingizga yetkazamiz.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section section--soft" id="savollar">
+  <div class="container faq-wrap">
+    <div>
+      <span class="eyebrow" data-i18n="faq.eyebrow">Savol-javob</span>
+      <h2 data-i18n="faq.title">Ko'p beriladigan savollar</h2>
+      <p class="muted" data-i18n="faq.text">Javob topmadingizmi? Telegram orqali yozing yoki qo'ng'iroq qiling.</p>
+      <a class="btn btn--ghost" data-tg href="https://t.me/humoplastik_bot" target="_blank" rel="noopener" data-i18n="faq.tg">Telegramda yozish</a>
+    </div>
+    <div class="faq">
+      <details open><summary data-i18n="faq.q1">Minimal buyurtma hajmi qancha?</summary><p data-i18n="faq.a1">Mahsulotga qarab: mayka paketlar — 50 kg dan, zip-lock — 1000 donadan, logotipli paketlar — 1000 donadan. Har bir mahsulot kartochkasida ko'rsatilgan.</p></details>
+      <details><summary data-i18n="faq.q2">Logotipli paket qancha vaqtda tayyor bo'ladi?</summary><p data-i18n="faq.a2">Maket tasdiqlangandan so'ng odatda 3–7 ish kuni. Shoshilinch buyurtmalarni ham bajaramiz.</p></details>
+      <details><summary data-i18n="faq.q3">Qanday to'lov usullari bor?</summary><p data-i18n="faq.a3">Naqd pul, plastik karta (Uzcard / Humo), Click, Payme va bank o'tkazmasi (QQS bilan hisob-faktura).</p></details>
+      <details><summary data-i18n="faq.q4">Viloyatlarga yetkazib berasizmi?</summary><p data-i18n="faq.a4">Ha. Toshkent shahri bo'ylab bepul, viloyatlarga esa ishonchli transport kompaniyalari orqali jo'natamiz.</p></details>
+      <details><summary data-i18n="faq.q5">Namuna olsa bo'ladimi?</summary><p data-i18n="faq.a5">Albatta. Ofisimizga kelib namunalarni ko'rishingiz yoki kuryer orqali olishingiz mumkin.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ALOQA ============ -->
+<section class="section" id="aloqa">
+  <div class="container contact">
+    <div class="contact__card">
+      <span class="eyebrow eyebrow--light" data-i18n="contact.eyebrow">Aloqa</span>
+      <h2 data-i18n="contact.title">Narxni bilmoqchimisiz?</h2>
+      <p data-i18n="contact.text">Raqamingizni qoldiring — menejer 15 daqiqa ichida qo'ng'iroq qiladi.</p>
+      <form id="callbackForm" class="cb-form" novalidate>
+        <input name="name" placeholder="Ismingiz" data-i18n-ph="ph.name" required autocomplete="name">
+        <input name="phone" type="tel" placeholder="+998 __ ___ __ __" required autocomplete="tel" data-mask>
+        <textarea name="message" rows="3" placeholder="Qaysi mahsulot va qancha kerak? (ixtiyoriy)" data-i18n-ph="ph.msg"></textarea>
+        <button class="btn btn--primary btn--block" type="submit" data-i18n="contact.btn">Qo'ng'iroq qilishingizni kutaman</button>
+      </form>
+    </div>
+    <div class="contact__info">
+      <ul class="contacts">
+        <li><span class="ci"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></span><div><small data-i18n="contact.phone">Telefon</small><a data-phone href="tel:+998900000000">+998 90 000 00 00</a><a data-phone2 href="tel:+998710000000">+998 71 000 00 00</a></div></li>
+        <li><span class="ci"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><small data-i18n="contact.addr">Manzil</small><span data-address>Toshkent sh.</span></div></li>
+        <li><span class="ci"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><small data-i18n="contact.hours">Ish vaqti</small><span data-hours>Du–Shan</span></div></li>
+        <li><span class="ci"><svg viewBox="0 0 24 24"><path d="m22 3-9.5 18-2.5-8-8-2.5L22 3Z"/></svg></span><div><small>Telegram</small><a data-tg href="https://t.me/humoplastik_bot" target="_blank" rel="noopener">@humoplastik_bot</a></div></li>
+      </ul>
+      <div class="map"><iframe id="map" title="Map" loading="lazy" src="about:blank"></iframe></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__in">
+    <a href="#top" class="logo logo--light"><span class="logo__mark"><svg viewBox="0 0 32 32"><path d="M4 20c6-1 9-5 12-12 3 7 6 11 12 12-5 1-8 3-12 8-4-5-7-7-12-8Z" fill="currentColor"/></svg></span><span class="logo__text">HUMO<b>PLASTIK</b></span></a>
+    <p data-i18n="footer.text">Polietilen paketlar va qadoqlash mahsulotlari ishlab chiqaruvchisi.</p>
+    <p class="footer__copy">© <span id="year"></span> HUMO PLASTIK. <span data-i18n="footer.copy">Barcha huquqlar himoyalangan.</span></p>
+  </div>
+</footer>
+
+<!-- Telegram suzuvchi tugma (kompyuterda) -->
+<a class="tg-float" data-tg href="https://t.me/humoplastik_bot" target="_blank" rel="noopener" aria-label="Telegram">
+  <svg viewBox="0 0 24 24"><path d="m22 3-9.5 18-2.5-8-8-2.5L22 3Z"/></svg>
+</a>
+
+<!-- ============ ILOVANI O'RNATISH PANELI ============ -->
+<div class="install" id="installBar" hidden>
+  <img src="/img/icon-192.png" alt="">
+  <div class="install__txt"><b data-i18n="install.title">HUMO ilovasi</b><small data-i18n="install.text">Bosh ekranga o'rnating — tez va qulay</small></div>
+  <button class="btn btn--primary btn--sm" id="installBtn" data-i18n="install.btn">O'rnatish</button>
+  <button class="install__x" id="installX" aria-label="×">×</button>
+</div>
+
+<!-- ============ PASTKI MENYU (telefon) ============ -->
+<nav class="tabbar" id="tabbar">
+  <a href="#top" data-tab="top" class="is-active">
+    <svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></svg>
+    <span data-i18n="nav.home">Asosiy</span></a>
+  <a href="#katalog" data-tab="katalog">
+    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+    <span data-i18n="nav.catalog">Katalog</span></a>
+  <button type="button" class="tabbar__cart" id="tabCart">
+    <span class="tabbar__cart-ic"><svg viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-12L5 3H2"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg>
+      <i data-cart-count>0</i></span>
+    <span data-i18n="nav.cart">Savat</span></button>
+  <a href="#kalkulyator" data-tab="kalkulyator">
+    <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 6h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01M8 19h8"/></svg>
+    <span data-i18n="nav.calcShort">Hisoblash</span></a>
+  <a href="#aloqa" data-tab="aloqa">
+    <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+    <span data-i18n="nav.contact">Aloqa</span></a>
+</nav>
+
+<!-- ============ MAHSULOT MODALI ============ -->
+<div class="modal" id="productModal" aria-hidden="true">
+  <div class="modal__bg" data-close></div>
+  <div class="modal__box modal__box--product" role="dialog" aria-modal="true">
+    <span class="sheet-handle"></span>
+    <button class="modal__x" data-close aria-label="×">×</button>
+    <div class="pm__img"><img id="pmImg" alt=""></div>
+    <div class="pm__body">
+      <h3 id="pmName"></h3>
+      <p class="muted" id="pmDesc"></p>
+      <div class="pm__price"><b id="pmPrice"></b> <span id="pmUnit"></span></div>
+      <div class="pm__opts">
+        <label class="field"><span data-i18n="pm.size">O'lcham</span><select id="pmSize"></select></label>
+        <label class="field"><span data-i18n="pm.thick">Qalinlik / tur</span><select id="pmThick"></select></label>
+        <label class="field"><span data-i18n="pm.color">Rang</span><select id="pmColor"></select></label>
+        <label class="field"><span><span data-i18n="pm.qty">Miqdor</span> (<b id="pmQtyUnit"></b>)</span>
+          <div class="stepper"><button type="button" data-step="-1">−</button><input id="pmQty" type="number" inputmode="numeric"><button type="button" data-step="1">+</button></div>
+          <small class="hint" id="pmMin"></small>
+        </label>
+      </div>
+      <label class="check" id="pmLogoWrap"><input type="checkbox" id="pmLogo"><span><span data-i18n="calc.logo">Logotip pechati</span> (+<span class="logoPct">15</span>%)</span></label>
+      <div class="pm__foot">
+        <div><small class="muted" data-i18n="pm.total">Jami</small><b id="pmTotal"></b></div>
+        <button class="btn btn--primary" id="pmAdd" data-i18n="calc.add">Savatga qo'shish</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SAVAT ============ -->
+<div class="drawer" id="cart" aria-hidden="true">
+  <div class="drawer__bg" data-close></div>
+  <aside class="drawer__panel" role="dialog" aria-modal="true">
+    <div class="drawer__head">
+      <h3 data-i18n="cart.title">Savat</h3>
+      <button class="modal__x" data-close aria-label="×">×</button>
+    </div>
+    <div class="drawer__body">
+      <div id="cartItems"></div>
+      <div class="cart-empty" id="cartEmpty">
+        <svg viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-12L5 3H2"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg>
+        <p data-i18n="cart.empty">Savat hozircha bo'sh</p>
+        <a href="#katalog" class="btn btn--ghost" data-close data-i18n="cart.go">Katalogga o'tish</a>
+      </div>
+      <form id="orderForm" class="order-form" novalidate>
+        <h4 data-i18n="cart.form">Buyurtmachi ma'lumotlari</h4>
+        <input name="name" placeholder="Ism familiya *" data-i18n-ph="ph.fullname" required autocomplete="name">
+        <input name="phone" type="tel" placeholder="+998 __ ___ __ __ *" required autocomplete="tel" data-mask>
+        <input name="company" placeholder="Kompaniya / do'kon nomi" data-i18n-ph="ph.company">
+        <input name="address" placeholder="Yetkazish manzili" data-i18n-ph="ph.address" autocomplete="street-address">
+        <div class="row2">
+          <select name="delivery">
+            <option value="Yetkazib berish" data-i18n="opt.delivery">Yetkazib berish</option>
+            <option value="Olib ketish" data-i18n="opt.pickup">Olib ketish</option>
+          </select>
+          <select name="payment">
+            <option value="Naqd" data-i18n="opt.cash">Naqd</option>
+            <option value="Karta / Click / Payme" data-i18n="opt.card">Karta / Click / Payme</option>
+            <option value="Bank o'tkazmasi" data-i18n="opt.bank">Bank o'tkazmasi</option>
+          </select>
+        </div>
+        <textarea name="comment" rows="2" placeholder="Izoh (logotip, muddat va h.k.)" data-i18n-ph="ph.comment"></textarea>
+      </form>
+    </div>
+    <div class="drawer__foot" id="cartFoot">
+      <div class="drawer__total"><span data-i18n="cart.total">Jami:</span><b id="cartTotal">0</b></div>
+      <button class="btn btn--primary btn--block" id="orderSubmit" form="orderForm" type="submit" data-i18n="cart.submit">Buyurtma berish</button>
+      <small class="muted" data-i18n="cart.note">Narx taxminiy. Menejer qo'ng'iroq qilib tasdiqlaydi.</small>
+    </div>
+  </aside>
+</div>
+
+<!-- ============ MUVAFFAQIYAT ============ -->
+<div class="modal" id="successModal" aria-hidden="true">
+  <div class="modal__bg" data-close></div>
+  <div class="modal__box modal__box--ok" role="dialog" aria-modal="true">
+    <span class="sheet-handle"></span>
+    <div class="ok-ic"><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></div>
+    <h3 id="okTitle"></h3>
+    <p class="muted" id="okText"></p>
+    <button class="btn btn--primary" data-close data-i18n="ok.btn">Yaxshi</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="/js/i18n.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+.env
+data/orders.json
+data/admins.json
+*.tmp
+__pycache__/

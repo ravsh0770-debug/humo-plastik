@@ -1,0 +1,127 @@
+/* =====================================================================
+   HUMO PLASTIK — til tanlash va telefon ilovasi ko'rinishi
+   ===================================================================== */
+body.lock { overflow: hidden; }
+.toast { opacity: 0; visibility: hidden; pointer-events: none; transition: transform .35s, opacity .35s, visibility .35s; }
+.toast.show { opacity: 1; visibility: visible; }
+
+/* ---------- til tanlash ---------- */
+.lang { position: relative; }
+.lang__btn { display: flex; align-items: center; gap: .4rem; height: 46px; padding: 0 .85rem; border-radius: 14px; border: 1.5px solid var(--line); background: #fff; font-weight: 800; font-size: .85rem; color: var(--ink); transition: border-color .2s; }
+.lang__btn:hover, .lang.open .lang__btn { border-color: var(--ink); }
+.lang__btn svg { font-size: 1.1rem; }
+.lang__btn .lang__chev { font-size: .9rem; transition: transform .2s; }
+.lang.open .lang__chev { transform: rotate(180deg); }
+.lang__menu { position: absolute; right: 0; top: calc(100% + 8px); min-width: 180px; background: #fff; border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow-lg); padding: .4rem; opacity: 0; visibility: hidden; transform: translateY(-6px); transition: .2s; z-index: 60; }
+.lang.open .lang__menu { opacity: 1; visibility: visible; transform: none; }
+.lang__menu button { width: 100%; display: flex; align-items: center; gap: .7rem; padding: .7rem .8rem; border-radius: 10px; font-weight: 600; text-align: left; color: var(--ink); }
+.lang__menu button:hover { background: var(--soft); }
+.lang__menu button.is-active { background: var(--ink); color: #fff; }
+.lang__code { font-size: .72rem; font-weight: 800; width: 30px; height: 22px; border-radius: 6px; display: grid; place-items: center; background: var(--soft); color: var(--ink); }
+.lang__menu button.is-active .lang__code { background: var(--accent); color: var(--accent-ink); }
+
+.btn--sm { padding: .6rem 1rem; font-size: .85rem; }
+.stepper input { width: 100%; min-width: 0; }
+.sheet-handle { display: none; }
+[data-cart-count].is-zero { display: none !important; }
+
+/* ---------- pastki menyu va o'rnatish paneli: faqat telefonda ---------- */
+.tabbar, .install { display: none; }
+
+@media (max-width: 880px) {
+  html { scroll-padding-top: 70px; }
+  body { padding-bottom: calc(68px + env(safe-area-inset-bottom)); -webkit-tap-highlight-color: transparent; }
+  button, a, .tab { touch-action: manipulation; }
+
+  /* ixcham header */
+  .header__in { height: 62px; }
+  .header .cart-btn { display: none; }
+  .logo__mark { width: 36px; height: 36px; border-radius: 11px; }
+  .lang__btn { height: 40px; padding: 0 .7rem; border-radius: 12px; }
+  .lang__btn .lang__chev { display: none; }
+
+  /* pastki tab-bar */
+  .tabbar { display: grid; grid-template-columns: repeat(5, 1fr); position: fixed; left: 0; right: 0; bottom: 0; z-index: 70;
+    background: rgba(255,255,255,.94); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid var(--line); padding: 6px 4px calc(6px + env(safe-area-inset-bottom)); }
+  .tabbar a, .tabbar button { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 4px 0; font-size: .68rem; font-weight: 700; color: var(--muted); transition: color .2s, transform .15s; }
+  .tabbar svg { font-size: 1.35rem; }
+  .tabbar .is-active { color: var(--accent-2); }
+  .tabbar a:active, .tabbar button:active { transform: scale(.92); }
+  .tabbar__cart-ic { position: relative; width: 52px; height: 52px; margin-top: -26px; border-radius: 18px; display: grid; place-items: center; color: #fff;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 10px 20px -8px rgba(255,122,26,.8); border: 4px solid #fff; }
+  .tabbar__cart-ic svg { font-size: 1.4rem; }
+  .tabbar__cart i { position: absolute; top: -6px; right: -6px; min-width: 20px; height: 20px; padding: 0 5px; border-radius: 99px; background: var(--ink); color: #fff; font-style: normal; font-size: .7rem; display: grid; place-items: center; border: 2px solid #fff; }
+  .tabbar__cart.bump .tabbar__cart-ic { animation: bump .45s; }
+
+  .tg-float { display: none; }
+  .toast { bottom: calc(84px + env(safe-area-inset-bottom)); }
+
+  /* o'rnatish paneli */
+  .install:not([hidden]) { display: flex; align-items: center; gap: .7rem; position: fixed; left: 10px; right: 10px; bottom: calc(76px + env(safe-area-inset-bottom)); z-index: 65;
+    background: var(--ink); color: #fff; padding: .6rem .6rem .6rem .7rem; border-radius: 18px; box-shadow: var(--shadow-lg); animation: fadeUp .4s both; }
+  .install img { width: 42px; height: 42px; border-radius: 11px; }
+  .install__txt { flex: 1; min-width: 0; line-height: 1.25; }
+  .install__txt b { display: block; font-size: .9rem; }
+  .install__txt small { color: rgba(255,255,255,.65); font-size: .75rem; }
+  .install__x { color: rgba(255,255,255,.6); font-size: 1.4rem; width: 30px; }
+
+  /* katalog — ilovadagidek 2 ustun */
+  .section__head { margin-bottom: 1.4rem; }
+  .tabs { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; width: calc(100% + 32px); margin-inline: -16px; padding: .35rem 16px; background: none; border-radius: 0; }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab { flex-shrink: 0; background: var(--soft); }
+  .tab.is-active { background: var(--ink); color: #fff; box-shadow: none; }
+  .grid { grid-template-columns: repeat(2, 1fr); gap: .7rem; }
+  .product { border-radius: 16px; }
+  .product:hover { transform: none; box-shadow: none; border-color: var(--line); }
+  .product:active { transform: scale(.98); }
+  .product__img { aspect-ratio: 1/1; }
+  .badge { top: 8px; left: 8px; font-size: .65rem; padding: .2rem .55rem; }
+  .product__body { padding: .7rem .75rem .8rem; gap: .3rem; }
+  .product__body h3 { font-size: .85rem; line-height: 1.25; font-family: var(--body); font-weight: 800; letter-spacing: 0; }
+  .product__body p, .tags { display: none; }
+  .product__foot { padding-top: .35rem; border: 0; gap: .4rem; }
+  .price b { font-size: .88rem; }
+  .price small { font-size: .7rem; }
+  .add-btn { width: 36px; height: 36px; padding: 0; justify-content: center; border-radius: 11px; background: var(--accent-2); flex-shrink: 0; }
+  .add-btn span { display: none; }
+  .add-btn svg { font-size: 1.15rem; stroke-width: 2.6; }
+
+  /* oynalar — pastdan chiqadigan "sheet" */
+  .modal__box { left: 0; right: 0; top: auto; bottom: 0; width: 100%; max-height: 92vh; border-radius: 24px 24px 0 0;
+    transform: translateY(100%); opacity: 1; padding-bottom: env(safe-area-inset-bottom); }
+  .is-open .modal__box { transform: translateY(0); }
+  .modal__box--ok { width: 100%; }
+  .sheet-handle { display: block; position: absolute; top: 8px; left: 50%; transform: translateX(-50%); width: 40px; height: 5px; border-radius: 9px; background: rgba(0,0,0,.18); z-index: 3; }
+  .modal__box--product .sheet-handle { background: rgba(255,255,255,.85); }
+  .pm__img { min-height: 0; height: 230px; aspect-ratio: auto; overflow: hidden; }
+  .pm__foot b { font-size: 1.1rem; white-space: nowrap; }
+  .ci-row { grid-template-columns: 56px minmax(0, 1fr) auto; }
+  .ci-row img { width: 56px; height: 56px; }
+  .row2 select { padding-inline: .7rem; font-size: .9rem; }
+  .pm__body { gap: .7rem; }
+  .pm__body h3 { font-size: 1.25rem; }
+  .pm__opts { grid-template-columns: 1fr 1fr; }
+  .pm__foot { position: sticky; bottom: 0; background: #fff; margin: 0 -1.5rem -1.5rem; padding: 1rem 1.5rem; }
+
+  /* savat — to'liq ekran */
+  .drawer__panel { width: 100%; padding-top: env(safe-area-inset-top); }
+  .drawer__foot { padding-bottom: calc(1.2rem + env(safe-area-inset-bottom)); }
+
+  .hero { padding-top: 1.6rem; }
+  .hero__img { aspect-ratio: 4/3.4; border-radius: 24px; transform: none; }
+  .stats { margin-top: 2rem; }
+  .marquee { margin-top: 1.5rem; padding: 1rem 0; }
+  .marquee span { font-size: 1rem; }
+}
+
+@media (max-width: 380px) {
+  .pm__opts { grid-template-columns: 1fr; }
+  .logo__text { display: none; }
+}
+
+/* ilova sifatida o'rnatilganda */
+.is-app .header { padding-top: env(safe-area-inset-top); }
+html.is-app, .is-app body { overscroll-behavior-y: none; }
+.is-app .install { display: none !important; }
