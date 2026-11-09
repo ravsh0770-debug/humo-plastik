@@ -3,6 +3,7 @@
    shu sababli "uz" bo'limida faqat JS ichida ishlatiladigan matnlar bor. */
 window.I18N = {
   uz: {
+    "cart.items": "{n} ta",
     "meta.title": "HUMO PLASTIK — selofan paketlar ishlab chiqaruvchidan",
     "meta.desc": "Mayka, fasovka, zip-lock, doy-pak, logotipli paketlar, musor paketlari va PP qoplar — to'g'ridan-to'g'ri ishlab chiqaruvchidan ulgurji narxlarda.",
     "money": "so'm",
@@ -14,7 +15,7 @@ window.I18N = {
     "calc.min": "Minimal: {n} {u}",
     "cart.remove": "O'chirish", "cart.minLabel": "{u}, min {n}", "cart.logo": "logotip", "cart.sending": "Yuborilmoqda...",
     "ok.order": "Buyurtma #{id} qabul qilindi!",
-    "ok.orderText": "Jami: {sum}. Menejerimiz tez orada siz bilan bog'lanadi.",
+    "ok.orderText": "Menejerimiz tez orada siz bilan bog'lanib, narx va muddatni aytadi.",
     "ok.thanks": "Rahmat!",
     "ok.cbText": "So'rovingiz qabul qilindi. Menejer 15 daqiqa ichida qo'ng'iroq qiladi.",
     "toast.added": "Savatga qo'shildi ✓",
@@ -33,9 +34,10 @@ window.I18N = {
   },
 
   ru: {
+    "cart.items": "{n} шт.",
     "meta.title": "HUMO PLASTIK — полиэтиленовые пакеты от производителя",
     "meta.desc": "Пакеты «майка», фасовочные, зип-лок, дой-пак, пакеты с логотипом, мусорные пакеты и ПП-мешки — оптом напрямую от производителя.",
-    "nav.catalog": "Каталог", "nav.production": "Производство", "nav.calc": "Калькулятор", "nav.calcShort": "Расчёт",
+    "nav.catalog": "Каталог", "nav.production": "Производство", "nav.calc": "Быстрый заказ", "nav.calcShort": "Заказ",
     "nav.faq": "Вопросы", "nav.contact": "Контакты", "nav.home": "Главная", "nav.cart": "Корзина",
 
     "hero.eyebrow": "Напрямую от производителя",
@@ -48,7 +50,7 @@ window.I18N = {
     "stats.1": "лет опыта", "stats.2": "постоянных клиентов", "stats.3": "видов продукции", "stats.4": "дней — готовый заказ",
 
     "cat.eyebrow": "Каталог", "cat.title": "Наша продукция",
-    "cat.note": "Оптовые цены с НДС. На крупные объёмы — дополнительная скидка.",
+    "cat.note": "Выберите вид товара и количество — цену менеджер назовёт в зависимости от объёма. На крупные объёмы — скидка.",
     "tab.all": "Все", "tab.paket": "Пакеты", "tab.qadoq": "Упаковка", "tab.sanoat": "Пром / хозяйство",
 
     "prod.eyebrow": "Производство", "prod.title": "Собственный завод — цена без посредников",
@@ -68,9 +70,9 @@ window.I18N = {
     "ind.label": "У нас заказывают:", "ind.1": "Супермаркеты", "ind.2": "Пекарни", "ind.3": "Рестораны и кафе", "ind.4": "Аптеки",
     "ind.5": "Магазины одежды", "ind.6": "Интернет-магазины", "ind.7": "Пищевые производства", "ind.8": "Строительные компании",
 
-    "calc.eyebrow": "Онлайн-калькулятор", "calc.title": "Рассчитайте стоимость заказа прямо сейчас",
-    "calc.text": "Выберите товар и объём — увидите ориентировочную цену. Точную цену менеджер подтвердит в течение 15 минут.",
-    "calc.product": "Товар", "calc.qty": "Количество", "calc.logo": "Печать логотипа", "calc.total": "Ориентировочная цена", "calc.add": "В корзину",
+    "calc.eyebrow": "Быстрый заказ", "calc.title": "Выберите товар и количество",
+    "calc.text": "Выберите нужный вид товара и количество и добавьте в корзину. Цену и условия менеджер сообщит по телефону в течение 15 минут.",
+    "calc.product": "Товар", "calc.qty": "Количество", "calc.logo": "Печать логотипа", "calc.total": "Выбрано", "calc.add": "В корзину",
 
     "flow.eyebrow": "Как заказать", "flow.title": "Заказ за 4 шага",
     "flow.1t": "Выберите", "flow.1d": "Выберите товар, размер и количество в каталоге.",
@@ -93,11 +95,11 @@ window.I18N = {
     "ph.fullname": "Имя и фамилия *", "ph.company": "Компания / магазин", "ph.address": "Адрес доставки", "ph.comment": "Комментарий (логотип, сроки и т.д.)",
     "footer.text": "Производитель полиэтиленовых пакетов и упаковки.", "footer.copy": "Все права защищены.",
 
-    "pm.size": "Размер", "pm.thick": "Толщина / тип", "pm.color": "Цвет", "pm.qty": "Количество", "pm.total": "Итого",
+    "pm.size": "Размер", "pm.thick": "Толщина / тип", "pm.color": "Цвет", "pm.qty": "Количество", "pm.total": "Количество",
     "pm.min": "Минимальный заказ: {n} {u}", "calc.min": "Минимум: {n} {u}",
     "cart.title": "Корзина", "cart.empty": "Корзина пока пуста", "cart.go": "Перейти в каталог", "cart.form": "Данные заказчика",
     "opt.delivery": "Доставка", "opt.pickup": "Самовывоз", "opt.cash": "Наличные", "opt.card": "Карта / Click / Payme", "opt.bank": "Перечисление",
-    "cart.total": "Итого:", "cart.submit": "Оформить заказ", "cart.note": "Цена ориентировочная. Менеджер позвонит и подтвердит.",
+    "cart.total": "Товаров:", "cart.submit": "Оформить заказ", "cart.note": "Цену и условия доставки менеджер сообщит по телефону.",
     "cart.remove": "Удалить", "cart.minLabel": "{u}, мин. {n}", "cart.logo": "логотип", "cart.sending": "Отправка...",
 
     "money": "сум",
@@ -106,7 +108,7 @@ window.I18N = {
     "badge.hit": "Хит", "badge.brand": "Бренд", "badge.new": "Новинка",
     "card.sizes": "{n} размера", "card.min": "мин. {n} {u}", "card.per": "за 1 {u}", "card.order": "Заказать",
 
-    "ok.order": "Заказ #{id} принят!", "ok.orderText": "Итого: {sum}. Наш менеджер скоро свяжется с вами.",
+    "ok.order": "Заказ #{id} принят!", "ok.orderText": "Наш менеджер скоро свяжется с вами и назовёт цену и сроки.",
     "ok.thanks": "Спасибо!", "ok.cbText": "Заявка принята. Менеджер перезвонит в течение 15 минут.", "ok.btn": "Хорошо",
     "toast.added": "Добавлено в корзину ✓", "toast.fill": "Заполните имя и номер телефона",
     "toast.net": "Проверьте подключение к интернету", "toast.load": "Не удалось загрузить товары",
@@ -118,9 +120,10 @@ window.I18N = {
   },
 
   en: {
+    "cart.items": "{n}",
     "meta.title": "HUMO PLASTIK — plastic bags direct from the manufacturer",
     "meta.desc": "T-shirt bags, produce bags, zip-lock bags, stand-up pouches, custom logo bags, garbage bags and PP sacks — wholesale, direct from the factory.",
-    "nav.catalog": "Catalog", "nav.production": "Production", "nav.calc": "Calculator", "nav.calcShort": "Calculate",
+    "nav.catalog": "Catalog", "nav.production": "Production", "nav.calc": "Quick order", "nav.calcShort": "Order",
     "nav.faq": "FAQ", "nav.contact": "Contact", "nav.home": "Home", "nav.cart": "Cart",
 
     "hero.eyebrow": "Direct from the manufacturer",
@@ -133,7 +136,7 @@ window.I18N = {
     "stats.1": "years of experience", "stats.2": "regular clients", "stats.3": "product types", "stats.4": "days to a finished order",
 
     "cat.eyebrow": "Catalog", "cat.title": "Our products",
-    "cat.note": "Wholesale prices incl. VAT. Extra discounts for large volumes.",
+    "cat.note": "Choose a product type and quantity — your manager will quote a price based on volume. Discounts for large orders.",
     "tab.all": "All", "tab.paket": "Bags", "tab.qadoq": "Packaging", "tab.sanoat": "Industrial / household",
 
     "prod.eyebrow": "Production", "prod.title": "Our own factory — no middleman markup",
@@ -153,9 +156,9 @@ window.I18N = {
     "ind.label": "Who orders from us:", "ind.1": "Supermarkets", "ind.2": "Bakeries", "ind.3": "Restaurants & cafés", "ind.4": "Pharmacies",
     "ind.5": "Clothing stores", "ind.6": "Online stores", "ind.7": "Food producers", "ind.8": "Construction companies",
 
-    "calc.eyebrow": "Online calculator", "calc.title": "Estimate your order cost now",
-    "calc.text": "Choose a product and quantity to see an estimated price. Our manager confirms the exact price within 15 minutes.",
-    "calc.product": "Product", "calc.qty": "Quantity", "calc.logo": "Logo printing", "calc.total": "Estimated price", "calc.add": "Add to cart",
+    "calc.eyebrow": "Quick order", "calc.title": "Choose a product and quantity",
+    "calc.text": "Pick the product type and quantity you need and add it to the cart. Our manager will call within 15 minutes with the price and terms.",
+    "calc.product": "Product", "calc.qty": "Quantity", "calc.logo": "Logo printing", "calc.total": "Selected", "calc.add": "Add to cart",
 
     "flow.eyebrow": "How it works", "flow.title": "Order in 4 steps",
     "flow.1t": "Choose", "flow.1d": "Pick a product, size and quantity from the catalog.",
@@ -178,11 +181,11 @@ window.I18N = {
     "ph.fullname": "Full name *", "ph.company": "Company / shop name", "ph.address": "Delivery address", "ph.comment": "Comment (logo, deadline, etc.)",
     "footer.text": "Manufacturer of polyethylene bags and packaging.", "footer.copy": "All rights reserved.",
 
-    "pm.size": "Size", "pm.thick": "Thickness / type", "pm.color": "Colour", "pm.qty": "Quantity", "pm.total": "Total",
+    "pm.size": "Size", "pm.thick": "Thickness / type", "pm.color": "Colour", "pm.qty": "Quantity", "pm.total": "Quantity",
     "pm.min": "Minimum order: {n} {u}", "calc.min": "Minimum: {n} {u}",
     "cart.title": "Cart", "cart.empty": "Your cart is empty", "cart.go": "Go to catalog", "cart.form": "Your details",
     "opt.delivery": "Delivery", "opt.pickup": "Pickup", "opt.cash": "Cash", "opt.card": "Card / Click / Payme", "opt.bank": "Bank transfer",
-    "cart.total": "Total:", "cart.submit": "Place order", "cart.note": "Estimated price. A manager will call to confirm.",
+    "cart.total": "Items:", "cart.submit": "Place order", "cart.note": "Your manager will call to confirm the price and delivery terms.",
     "cart.remove": "Remove", "cart.minLabel": "{u}, min {n}", "cart.logo": "logo", "cart.sending": "Sending...",
 
     "money": "UZS",
@@ -191,7 +194,7 @@ window.I18N = {
     "badge.hit": "Bestseller", "badge.brand": "Branding", "badge.new": "New",
     "card.sizes": "{n} sizes", "card.min": "min {n} {u}", "card.per": "per {u}", "card.order": "Order",
 
-    "ok.order": "Order #{id} received!", "ok.orderText": "Total: {sum}. Our manager will contact you shortly.",
+    "ok.order": "Order #{id} received!", "ok.orderText": "Our manager will contact you shortly with the price and lead time.",
     "ok.thanks": "Thank you!", "ok.cbText": "Request received. A manager will call you within 15 minutes.", "ok.btn": "OK",
     "toast.added": "Added to cart ✓", "toast.fill": "Please enter your name and phone number",
     "toast.net": "Check your internet connection", "toast.load": "Couldn't load products",

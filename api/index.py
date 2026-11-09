@@ -285,8 +285,7 @@ def order_text(o):
         lines.append(f"{i}. <b>{e(it['name'])}</b> — {it['qty']} {e(it['unit'])}")
         if opts:
             lines.append(f"    <i>{e(', '.join(opts))}</i>")
-        lines.append(f"    = {fmt_sum(it['sum'])}")
-    lines += ["", f"💰 <b>Jami: {fmt_sum(o['total'])}</b>"]
+    lines += ["", f"📦 <b>Jami: {len(o['items'])} xil mahsulot</b>", "ℹ️ Narxni mijozga qo'ng'iroq qilib ayting."]
     if c.get("comment"):
         lines += ["", f"💬 {e(c['comment'])}"]
     return "\n".join(lines)
@@ -400,8 +399,8 @@ def handle_update(u):
         orders = store.recent(2000)
         today = now().strftime("%d.%m.%Y")
         t = [o for o in orders if o["created"].startswith(today)]
-        send(f"📊 <b>Statistika</b>\nBugun: {len(t)} ta ({fmt_sum(sum(o['total'] for o in t))})\n"
-             f"Jami: {len(orders)} ta ({fmt_sum(sum(o['total'] for o in orders))})\n"
+        send(f"📊 <b>Statistika</b>\nBugun: {len(t)} ta buyurtma\n"
+             f"Jami: {len(orders)} ta buyurtma\n"
              f"Ko'rib chiqilmagan: {sum(1 for o in orders if o['status'] == 'new')} ta")
 
 
@@ -441,7 +440,6 @@ def create_order(data):
         raise ApiError("phone", "Telefon raqami noto'g'ri")
 
     products = {p["id"]: p for p in catalog()["products"]}
-    extra = catalog()["settings"].get("logo_extra_percent", LOGO_EXTRA * 100) / 100
     items = []
     for it in (data.get("items") or [])[:30]:
         p = products.get(it.get("id"))
@@ -454,10 +452,8 @@ def create_order(data):
         if qty < p["min"] or qty > 10_000_000:
             raise ApiError("min", f"{uz(p['name'])}: minimal {p['min']} {p['unit']}")
         logo = bool(it.get("logo")) and p.get("logo", False)
-        price = p["price"] * (1 + extra if logo else 1)  # narx doim serverda hisoblanadi
         items.append({
-            "id": p["id"], "name": uz(p["name"]), "unit": p["unit"], "qty": qty,
-            "price": round(price), "sum": round(price * qty), "logo": logo,
+            "id": p["id"], "name": uz(p["name"]), "unit": p["unit"], "qty": qty, "logo": logo,
             "size": clean(it.get("size"), 40), "thickness": clean(it.get("thickness"), 40),
             "color": clean(it.get("color"), 40),
         })
@@ -471,7 +467,6 @@ def create_order(data):
         "lang": get_lang(data),
         "customer": customer,
         "items": items,
-        "total": sum(i["sum"] for i in items),
     }
     try:
         store.save(order)
@@ -570,7 +565,7 @@ class handler(BaseHTTPRequestHandler):
         try:
             if name == "order":
                 o = create_order(data)
-                return self.send_json({"ok": True, "order_id": o["id"], "total": o["total"]})
+                return self.send_json({"ok": True, "order_id": o["id"]})
             create_callback(data)
             return self.send_json({"ok": True})
         except ApiError as e:

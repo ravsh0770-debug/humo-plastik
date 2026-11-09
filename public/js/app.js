@@ -61,10 +61,9 @@
   /* ================= MA'LUMOTLAR ================= */
   let PRODUCTS = [];
   let SETTINGS = {};
-  let LOGO = 0.15;
   let curCat = "all";
   const byId = id => PRODUCTS.find(p => p.id === id);
-  const unitPrice = (p, logo) => p.price * (logo && p.logo ? 1 + LOGO : 1);
+  const qtyText = (q, p) => `${num(q)} ${unit(p.unit)}`;
   const optText = (p, field, i, lg) => unitize(L(p[field][i], lg));
   const optUz = (p, field, i) => L(p[field][i], "uz");
 
@@ -96,11 +95,10 @@
           <div class="stepper"><button type="button" data-ci="${i}" data-d="-1">−</button>
           <input type="number" inputmode="numeric" value="${c.qty}" data-ciq="${i}" min="${p.min}"><button type="button" data-ci="${i}" data-d="1">+</button></div>
           <small>${t("cart.minLabel", { u: unit(p.unit), n: num(p.min) })}</small></div>
-        <div class="ci-row__right"><b>${money(unitPrice(p, c.logo) * c.qty)}</b><button class="ci-del" data-del="${i}">${t("cart.remove")}</button></div>
+        <div class="ci-row__right"><b>${qtyText(c.qty, p)}</b><button class="ci-del" data-del="${i}">${t("cart.remove")}</button></div>
       </div>`;
     }).join("");
-    const total = cart.reduce((s, c) => s + unitPrice(byId(c.id), c.logo) * c.qty, 0);
-    $("#cartTotal").textContent = money(total);
+    $("#cartTotal").textContent = t("cart.items", { n: cart.length });
     $$("[data-cart-count]").forEach(el => { el.textContent = cart.length; el.classList.toggle("is-zero", !cart.length); });
     $("#cart").classList.toggle("is-empty", cart.length === 0);
   }
@@ -136,9 +134,9 @@
         <div class="product__body">
           <h3 data-open="${p.id}">${L(p.name)}</h3>
           <p>${L(p.desc)}</p>
-          <div class="tags"><span>${t("card.sizes", { n: p.sizes.length })}</span><span>${th}</span><span>${t("card.min", { n: num(p.min), u: unit(p.unit) })}</span></div>
+          <div class="tags"><span>${t("card.sizes", { n: p.sizes.length })}</span><span>${th}</span></div>
           <div class="product__foot">
-            <div class="price"><b>${money(p.price)}</b><small>${t("card.per", { u: unit(p.unit) })}</small></div>
+            <div class="price"><small>${t("pm.qty")}</small><b>${t("card.min", { n: num(p.min), u: unit(p.unit) })}</b></div>
             <button class="add-btn" data-open="${p.id}" aria-label="${t("card.order")}">
               <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span>${t("card.order")}</span></button>
           </div>
@@ -173,8 +171,6 @@
     $("#pmImg").src = p.img; $("#pmImg").alt = L(p.name);
     $("#pmName").textContent = L(p.name);
     $("#pmDesc").textContent = L(p.desc);
-    $("#pmPrice").textContent = money(p.price);
-    $("#pmUnit").textContent = "/ " + unit(p.unit);
     $("#pmQtyUnit").textContent = unit(p.unit);
     $("#pmSize").innerHTML = opts(p, "sizes");
     $("#pmThick").innerHTML = opts(p, "thickness");
@@ -192,7 +188,7 @@
   }
   function pmTotal() {
     const q = parseInt($("#pmQty").value) || 0;
-    $("#pmTotal").textContent = money(unitPrice(current, $("#pmLogo").checked) * q);
+    $("#pmTotal").textContent = qtyText(q, current);
   }
   $("#pmQty").addEventListener("input", pmTotal);
   $("#pmLogo").addEventListener("change", pmTotal);
@@ -230,9 +226,8 @@
   function calc() {
     const p = byId($("#calcProduct").value);
     const q = parseInt($("#calcQty").value) || 0;
-    const u = unitPrice(p, $("#calcLogo").checked);
-    $("#calcTotal").textContent = money(u * q);
-    $("#calcPer").textContent = `${money(u)} × ${num(q)} ${unit(p.unit)}`;
+    $("#calcTotal").textContent = qtyText(q, p);
+    $("#calcPer").textContent = L(p.name) + ($("#calcLogo").checked && p.logo ? " · " + t("calc.logo").toLowerCase() : "");
     $("#calcMin").classList.toggle("err", q < p.min);
   }
   $("#calcProduct").addEventListener("change", calcSet);
@@ -328,7 +323,7 @@
       const r = await post("/api/order", { customer, items });
       cart = []; saveCart(); renderCart(); f.reset(); closeAll();
       $("#okTitle").textContent = t("ok.order", { id: r.order_id });
-      $("#okText").textContent = t("ok.orderText", { sum: money(r.total) });
+      $("#okText").textContent = t("ok.orderText");
       openModal("#successModal");
       if (navigator.vibrate) navigator.vibrate([20, 40, 20]);
     } catch (err) {
@@ -368,7 +363,6 @@
     if (s.hours) $$("[data-hours]").forEach(a => a.textContent = L(s.hours));
     if (s.telegram) $$("[data-tg]").forEach(a => a.href = s.telegram);
     if (s.map && $("#map").src === "about:blank") $("#map").src = s.map;
-    if (s.logo_extra_percent != null) { LOGO = s.logo_extra_percent / 100; $$(".logoPct").forEach(x => x.textContent = s.logo_extra_percent); }
   }
 
   addEventListener("scroll", () => $("#header").classList.toggle("is-scrolled", scrollY > 10), { passive: true });

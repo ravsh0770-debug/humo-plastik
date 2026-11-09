@@ -7,7 +7,7 @@ Telefonda ilova (PWA) ko'rinishida ishlaydi, UZ / RU / EN tillari bor.
 ```
 public/          sayt (HTML, CSS, JS, rasmlar, manifest, service worker)
 api/index.py     API + Telegram bot (Vercel serverless funksiyasi)
-data/products.json   mahsulotlar, narxlar, kontaktlar (3 tilda)
+data/products.json   mahsulotlar, minimal miqdorlar, kontaktlar (3 tilda)
 server.py        lokal server (kompyuterda sinash uchun)
 vercel.json      Vercel sozlamalari
 ```
@@ -70,7 +70,7 @@ Tekshirish: `https://SAYTINGIZ.vercel.app/api/health`
 - Botga buyurtma o'zbek tilida keladi, mijoz tili alohida ko'rsatiladi.
 
 ## Tahrirlash
-- Narxlar, mahsulotlar, telefon, manzil: `data/products.json`
+- Mahsulotlar, minimal miqdor, telefon, manzil: `data/products.json`
 - Raqamlar (10+ yil va h.k.) va matnlar: `public/index.html` + `public/js/i18n.js`
 - Rasmlar: `public/img/` (Unsplash/Pexels bepul fotolar — o'z rasmlaringizga almashtirish tavsiya etiladi)
-- Narx har doim serverda `products.json` dan qayta hisoblanadi — brauzerdan soxtalashtirib bo'lmaydi.
+- Saytda narx ko'rsatilmaydi: mijoz mahsulot turi va miqdorini tanlaydi, narxni menejer qo'ng'iroq qilib aytadi.
