@@ -293,14 +293,27 @@ def order_text(o):
 
 
 def notify_admins(text, keyboard=None):
+    """Adminlarga yuboradi. Nechta adminga yetib borganini qaytaradi."""
     ids = admins()
+    if not BOT_TOKEN:
+        print("[telegram] BOT_TOKEN sozlanmagan — xabar yuborilmadi!")
+        return 0
     if not ids:
-        print("[telegram] Admin yo'q! Botga /start yuboring.")
+        print("[telegram] Admin yo'q! ADMIN_CHAT_IDS ni sozlang yoki botga /start yuboring.")
+    sent = 0
     for cid in ids:
         p = {"chat_id": cid, "text": text, "parse_mode": "HTML"}
         if keyboard:
             p["reply_markup"] = keyboard
-        tg("sendMessage", **p)
+        r = tg("sendMessage", **p)
+        sent += bool(r and r.get("ok"))
+    return sent
+
+
+def ensure_delivered(sent):
+    """Xabar hech kimga yetmasa va buyurtma saqlanmasa — mijozga yashirmasdan aytamiz."""
+    if not sent and store.kind == "none":
+        raise ApiError("nobot", "Buyurtma yuborilmadi. Iltimos, telefon orqali bog'laning.")
 
 
 def relabel(msg, new_label):
@@ -477,7 +490,7 @@ def create_order(data):
         store.save(order)
     except Exception as e:
         print(f"[store] saqlash xato: {e}")
-    notify_admins(order_text(order), order_keyboard(order["id"]))
+    ensure_delivered(notify_admins(order_text(order), order_keyboard(order["id"])))
     return order
 
 
@@ -492,7 +505,7 @@ def create_callback(data):
             f"👤 {e(name)}\n📞 <code>{e(phone)}</code>")
     if data.get("message"):
         text += f"\n💬 {e(clean(data.get('message'), 600))}"
-    notify_admins(text)
+    ensure_delivered(notify_admins(text))
 
 
 def setup_webhook(host, key):
@@ -533,6 +546,7 @@ class handler(BaseHTTPRequestHandler):
             return self.send_json(catalog(), cache="public, s-maxage=60, stale-while-revalidate=600")
         if name == "health":
             return self.send_json({"ok": True, "bot": bool(BOT_TOKEN), "storage": store.kind,
+                                   "ready": bool(BOT_TOKEN and admins()),
                                    "admins": len(admins()), "time": now().isoformat(timespec="seconds")})
         if name == "setup":
             host = self.headers.get("X-Forwarded-Host") or self.headers.get("Host", "")

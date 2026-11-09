@@ -3,6 +3,7 @@
    shu sababli "uz" bo'limida faqat JS ichida ishlatiladigan matnlar bor. */
 window.I18N = {
   uz: {
+    "err.nobot": "Buyurtma yuborilmadi. Iltimos, qo'ng'iroq qiling: {phone}",
     "meta.title": "HUMO PLASTIK — selofan paketlar ishlab chiqaruvchidan",
     "meta.desc": "Mayka, fasovka, zip-lock, doy-pak, logotipli paketlar, musor paketlari va PP qoplar — to'g'ridan-to'g'ri ishlab chiqaruvchidan ulgurji narxlarda.",
     "money": "so'm",
@@ -33,6 +34,7 @@ window.I18N = {
   },
 
   ru: {
+    "err.nobot": "Заказ не отправлен. Пожалуйста, позвоните: {phone}",
     "meta.title": "HUMO PLASTIK — полиэтиленовые пакеты от производителя",
     "meta.desc": "Пакеты «майка», фасовочные, зип-лок, дой-пак, пакеты с логотипом, мусорные пакеты и ПП-мешки — оптом напрямую от производителя.",
     "nav.catalog": "Каталог", "nav.production": "Производство", "nav.calc": "Калькулятор", "nav.calcShort": "Расчёт",
@@ -118,6 +120,7 @@ window.I18N = {
   },
 
   en: {
+    "err.nobot": "Your order could not be sent. Please call us: {phone}",
     "meta.title": "HUMO PLASTIK — plastic bags direct from the manufacturer",
     "meta.desc": "T-shirt bags, produce bags, zip-lock bags, stand-up pouches, custom logo bags, garbage bags and PP sacks — wholesale, direct from the factory.",
     "nav.catalog": "Catalog", "nav.production": "Production", "nav.calc": "Calculator", "nav.calcShort": "Calculate",

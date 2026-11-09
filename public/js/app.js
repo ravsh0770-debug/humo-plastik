@@ -307,7 +307,7 @@
       r = await fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...data, lang }) });
     } catch { throw new Error(t("toast.net")); }
     const j = await r.json().catch(() => ({ ok: false }));
-    if (!j.ok) throw new Error(j.code ? t("err." + j.code) : (j.error || t("toast.net")));
+    if (!j.ok) throw new Error(j.code ? t("err." + j.code, { phone: SETTINGS.phone || "" }) : (j.error || t("toast.net")));
     return j;
   }
 
@@ -332,7 +332,7 @@
       openModal("#successModal");
       if (navigator.vibrate) navigator.vibrate([20, 40, 20]);
     } catch (err) {
-      toast(err.message, true);
+      toast(err.message, true, 7000);
     } finally {
       btn.disabled = false; btn.textContent = t("cart.submit");
     }
@@ -349,7 +349,7 @@
       $("#okTitle").textContent = t("ok.thanks");
       $("#okText").textContent = t("ok.cbText");
       openModal("#successModal");
-    } catch (err) { toast(err.message, true); }
+    } catch (err) { toast(err.message, true, 7000); }
     finally { btn.disabled = false; }
   });
 
