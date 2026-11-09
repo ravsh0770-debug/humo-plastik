@@ -28,21 +28,59 @@
       "unit": "kg",
       "min": 50,
       "logo": true,
-      "name": { "uz": "Mayka paketlar", "ru": "Пакеты «майка»", "en": "T-shirt bags" },
+      "name": {
+        "uz": "Mayka paketlar",
+        "ru": "Пакеты «майка»",
+        "en": "T-shirt bags"
+      },
       "desc": {
         "uz": "Supermarket, do'kon va bozorlar uchun mustahkam «mayka» paketlar. Birlamchi xomashyodan, yirtilmaydi.",
         "ru": "Прочные пакеты «майка» для супермаркетов, магазинов и рынков. Из первичного сырья, не рвутся.",
         "en": "Strong T-shirt bags for supermarkets, shops and markets. Made from virgin material, tear-resistant."
       },
-      "sizes": ["25x45 sm", "30x55 sm", "38x65 sm", "45x75 sm"],
-      "thickness": ["12 mkm", "15 mkm", "20 mkm", "25 mkm"],
+      "sizes": [
+        "25x45 sm",
+        "30x55 sm",
+        "38x65 sm",
+        "45x75 sm"
+      ],
+      "thickness": [
+        "12 mkm",
+        "15 mkm",
+        "20 mkm",
+        "25 mkm"
+      ],
       "colors": [
-        { "uz": "Oq", "ru": "Белый", "en": "White" },
-        { "uz": "Qora", "ru": "Чёрный", "en": "Black" },
-        { "uz": "Ko'k", "ru": "Синий", "en": "Blue" },
-        { "uz": "Yashil", "ru": "Зелёный", "en": "Green" },
-        { "uz": "Sariq", "ru": "Жёлтый", "en": "Yellow" },
-        { "uz": "Shaffof", "ru": "Прозрачный", "en": "Clear" }
+        {
+          "uz": "Oq",
+          "ru": "Белый",
+          "en": "White"
+        },
+        {
+          "uz": "Qora",
+          "ru": "Чёрный",
+          "en": "Black"
+        },
+        {
+          "uz": "Ko'k",
+          "ru": "Синий",
+          "en": "Blue"
+        },
+        {
+          "uz": "Yashil",
+          "ru": "Зелёный",
+          "en": "Green"
+        },
+        {
+          "uz": "Sariq",
+          "ru": "Жёлтый",
+          "en": "Yellow"
+        },
+        {
+          "uz": "Shaffof",
+          "ru": "Прозрачный",
+          "en": "Clear"
+        }
       ]
     },
     {
@@ -54,18 +92,44 @@
       "unit": "dona",
       "min": 1000,
       "logo": false,
-      "name": { "uz": "Logotipli paketlar", "ru": "Пакеты с логотипом", "en": "Custom logo bags" },
+      "name": {
+        "uz": "Logotipli paketlar",
+        "ru": "Пакеты с логотипом",
+        "en": "Custom logo bags"
+      },
       "desc": {
         "uz": "Brendingiz logotipi bilan 1–6 rangli flekso pechat. Dizaynni bepul tayyorlab beramiz.",
         "ru": "Флексопечать вашего логотипа в 1–6 цветов. Дизайн макета — бесплатно.",
         "en": "1–6 colour flexo printing with your logo. Free artwork design."
       },
-      "sizes": ["30x40 sm", "40x50 sm", "45x60 sm", "50x70 sm"],
-      "thickness": ["40 mkm", "50 mkm", "70 mkm", "100 mkm"],
+      "sizes": [
+        "30x40 sm",
+        "40x50 sm",
+        "45x60 sm",
+        "50x70 sm"
+      ],
+      "thickness": [
+        "40 mkm",
+        "50 mkm",
+        "70 mkm",
+        "100 mkm"
+      ],
       "colors": [
-        { "uz": "Oq", "ru": "Белый", "en": "White" },
-        { "uz": "Qora", "ru": "Чёрный", "en": "Black" },
-        { "uz": "Rangli (kelishiladi)", "ru": "Цветной (по согласованию)", "en": "Coloured (on request)" }
+        {
+          "uz": "Oq",
+          "ru": "Белый",
+          "en": "White"
+        },
+        {
+          "uz": "Qora",
+          "ru": "Чёрный",
+          "en": "Black"
+        },
+        {
+          "uz": "Rangli (kelishiladi)",
+          "ru": "Цветной (по согласованию)",
+          "en": "Coloured (on request)"
+        }
       ]
     },
     {
@@ -76,18 +140,43 @@
       "unit": "kg",
       "min": 30,
       "logo": true,
-      "name": { "uz": "Fasovka paketlari (rulonda)", "ru": "Фасовочные пакеты (в рулоне)", "en": "Produce bags on a roll" },
+      "name": {
+        "uz": "Fasovka paketlari (rulonda)",
+        "ru": "Фасовочные пакеты (в рулоне)",
+        "en": "Produce bags on a roll"
+      },
       "desc": {
         "uz": "Meva-sabzavot, non va oziq-ovqat uchun yupqa shaffof paketlar. Oziq-ovqatga xavfsiz HDPE.",
         "ru": "Тонкие прозрачные пакеты для фруктов, овощей, хлеба и продуктов. Пищевой ПНД.",
         "en": "Thin clear bags for fruit, vegetables, bread and groceries. Food-safe HDPE."
       },
-      "sizes": ["20x30 sm", "24x37 sm", "30x40 sm", "35x45 sm"],
-      "thickness": ["7 mkm", "8 mkm", "10 mkm"],
+      "sizes": [
+        "20x30 sm",
+        "24x37 sm",
+        "30x40 sm",
+        "35x45 sm"
+      ],
+      "thickness": [
+        "7 mkm",
+        "8 mkm",
+        "10 mkm"
+      ],
       "colors": [
-        { "uz": "Shaffof", "ru": "Прозрачный", "en": "Clear" },
-        { "uz": "Oq", "ru": "Белый", "en": "White" },
-        { "uz": "Ko'k", "ru": "Синий", "en": "Blue" }
+        {
+          "uz": "Shaffof",
+          "ru": "Прозрачный",
+          "en": "Clear"
+        },
+        {
+          "uz": "Oq",
+          "ru": "Белый",
+          "en": "White"
+        },
+        {
+          "uz": "Ko'k",
+          "ru": "Синий",
+          "en": "Blue"
+        }
       ]
     },
     {
@@ -98,18 +187,43 @@
       "unit": "dona",
       "min": 1000,
       "logo": true,
-      "name": { "uz": "Zip-lock paketlar", "ru": "Зип-лок пакеты", "en": "Zip-lock bags" },
+      "name": {
+        "uz": "Zip-lock paketlar",
+        "ru": "Зип-лок пакеты",
+        "en": "Zip-lock bags"
+      },
       "desc": {
         "uz": "Qayta yopiladigan zamokli paketlar: dorixona, zargarlik, ehtiyot qismlar va mayda mahsulotlar uchun.",
         "ru": "Пакеты с замком многоразового закрытия: для аптек, ювелирки, запчастей и мелких товаров.",
         "en": "Resealable bags for pharmacies, jewellery, spare parts and small items."
       },
-      "sizes": ["6x8 sm", "10x15 sm", "15x20 sm", "20x30 sm"],
-      "thickness": ["40 mkm", "60 mkm", "80 mkm"],
+      "sizes": [
+        "6x8 sm",
+        "10x15 sm",
+        "15x20 sm",
+        "20x30 sm"
+      ],
+      "thickness": [
+        "40 mkm",
+        "60 mkm",
+        "80 mkm"
+      ],
       "colors": [
-        { "uz": "Shaffof", "ru": "Прозрачный", "en": "Clear" },
-        { "uz": "Qizil chiziqli", "ru": "С красной полосой", "en": "Red stripe" },
-        { "uz": "Ko'k chiziqli", "ru": "С синей полосой", "en": "Blue stripe" }
+        {
+          "uz": "Shaffof",
+          "ru": "Прозрачный",
+          "en": "Clear"
+        },
+        {
+          "uz": "Qizil chiziqli",
+          "ru": "С красной полосой",
+          "en": "Red stripe"
+        },
+        {
+          "uz": "Ko'k chiziqli",
+          "ru": "С синей полосой",
+          "en": "Blue stripe"
+        }
       ]
     },
     {
@@ -121,71 +235,49 @@
       "unit": "dona",
       "min": 500,
       "logo": true,
-      "name": { "uz": "Doy-pak (oynali)", "ru": "Дой-пак с окном", "en": "Stand-up pouch with window" },
+      "name": {
+        "uz": "Doy-pak (oynali)",
+        "ru": "Дой-пак с окном",
+        "en": "Stand-up pouch with window"
+      },
       "desc": {
         "uz": "Tik turuvchi kraft doy-pak, zip-zamok va shaffof oyna bilan. Yong'oq, choy, qahva, shirinliklar uchun.",
         "ru": "Крафт дой-пак с зип-замком и прозрачным окном. Для орехов, чая, кофе, сладостей.",
         "en": "Kraft stand-up pouch with zipper and clear window. For nuts, tea, coffee and sweets."
       },
-      "sizes": ["12x20 sm", "16x26 sm", "20x30 sm"],
-      "thickness": [
-        { "uz": "Standart", "ru": "Стандарт", "en": "Standard" },
-        { "uz": "Qalin (folga qatlamli)", "ru": "Плотный (с фольгой)", "en": "Heavy (foil layer)" }
-      ],
-      "colors": [
-        { "uz": "Kraft", "ru": "Крафт", "en": "Kraft" },
-        { "uz": "Oq", "ru": "Белый", "en": "White" },
-        { "uz": "Qora", "ru": "Чёрный", "en": "Black" }
-      ]
-    },
-    {
-      "id": "kraft",
-      "cat": "qadoq",
-      "img": "/img/kraft.jpg",
-      "price": 1100,
-      "unit": "dona",
-      "min": 500,
-      "logo": true,
-      "name": { "uz": "Kraft qadoq paketlar", "ru": "Крафт-пакеты для упаковки", "en": "Kraft packaging bags" },
-      "desc": {
-        "uz": "Ekologik toza kraft-qog'oz va PE qatlamli paketlar. Kofe, un, quruq mahsulotlar uchun.",
-        "ru": "Экологичные пакеты из крафт-бумаги с ПЭ-слоем. Для кофе, муки и сыпучих продуктов.",
-        "en": "Eco-friendly kraft paper bags with a PE layer. For coffee, flour and dry goods."
-      },
-      "sizes": ["10x15 sm", "15x22 sm", "20x30 sm"],
-      "thickness": [
-        { "uz": "Standart", "ru": "Стандарт", "en": "Standard" },
-        { "uz": "Qalin", "ru": "Плотный", "en": "Heavy" }
-      ],
-      "colors": [
-        { "uz": "Kraft", "ru": "Крафт", "en": "Kraft" },
-        { "uz": "Oq", "ru": "Белый", "en": "White" }
-      ]
-    },
-    {
-      "id": "pouch",
-      "cat": "qadoq",
-      "img": "/img/pouch.jpg",
-      "price": 1400,
-      "unit": "dona",
-      "min": 3000,
-      "logo": false,
-      "name": { "uz": "Laminatsiyalangan qadoq", "ru": "Ламинированная упаковка", "en": "Laminated pouches" },
-      "desc": {
-        "uz": "OPP/PET/CPP ko'p qatlamli qadoq, to'liq rangli chuqur pechat bilan. Snek, kosmetika, maishiy kimyo uchun.",
-        "ru": "Многослойная упаковка OPP/PET/CPP с полноцветной глубокой печатью. Для снеков, косметики, бытовой химии.",
-        "en": "Multi-layer OPP/PET/CPP packaging with full-colour gravure print. For snacks, cosmetics, detergents."
-      },
       "sizes": [
-        "10x15 sm", "15x20 sm", "20x30 sm",
-        { "uz": "Maxsus o'lcham", "ru": "Индивидуальный размер", "en": "Custom size" }
+        "12x20 sm",
+        "16x26 sm",
+        "20x30 sm"
       ],
       "thickness": [
-        { "uz": "2 qatlam", "ru": "2 слоя", "en": "2 layers" },
-        { "uz": "3 qatlam", "ru": "3 слоя", "en": "3 layers" }
+        {
+          "uz": "Standart",
+          "ru": "Стандарт",
+          "en": "Standard"
+        },
+        {
+          "uz": "Qalin (folga qatlamli)",
+          "ru": "Плотный (с фольгой)",
+          "en": "Heavy (foil layer)"
+        }
       ],
       "colors": [
-        { "uz": "To'liq rangli pechat", "ru": "Полноцветная печать", "en": "Full-colour print" }
+        {
+          "uz": "Kraft",
+          "ru": "Крафт",
+          "en": "Kraft"
+        },
+        {
+          "uz": "Oq",
+          "ru": "Белый",
+          "en": "White"
+        },
+        {
+          "uz": "Qora",
+          "ru": "Чёрный",
+          "en": "Black"
+        }
       ]
     },
     {
@@ -196,18 +288,43 @@
       "unit": "rulon",
       "min": 100,
       "logo": false,
-      "name": { "uz": "Musor paketlari", "ru": "Мусорные пакеты", "en": "Garbage bags" },
+      "name": {
+        "uz": "Musor paketlari",
+        "ru": "Мусорные пакеты",
+        "en": "Garbage bags"
+      },
       "desc": {
         "uz": "Uy, ofis va kommunal xizmatlar uchun mustahkam musor paketlari. Bog'ichli va bog'ichsiz.",
         "ru": "Прочные мусорные пакеты для дома, офиса и коммунальных служб. С завязками и без.",
         "en": "Heavy-duty garbage bags for home, office and municipal use. With or without ties."
       },
-      "sizes": ["30 L", "60 L", "120 L", "240 L"],
-      "thickness": ["15 mkm", "25 mkm", "40 mkm"],
+      "sizes": [
+        "30 L",
+        "60 L",
+        "120 L",
+        "240 L"
+      ],
+      "thickness": [
+        "15 mkm",
+        "25 mkm",
+        "40 mkm"
+      ],
       "colors": [
-        { "uz": "Qora", "ru": "Чёрный", "en": "Black" },
-        { "uz": "Ko'k", "ru": "Синий", "en": "Blue" },
-        { "uz": "Yashil", "ru": "Зелёный", "en": "Green" }
+        {
+          "uz": "Qora",
+          "ru": "Чёрный",
+          "en": "Black"
+        },
+        {
+          "uz": "Ko'k",
+          "ru": "Синий",
+          "en": "Blue"
+        },
+        {
+          "uz": "Yashil",
+          "ru": "Зелёный",
+          "en": "Green"
+        }
       ]
     },
     {
@@ -218,17 +335,37 @@
       "unit": "dona",
       "min": 500,
       "logo": true,
-      "name": { "uz": "Polipropilen qoplar", "ru": "Полипропиленовые мешки", "en": "Woven PP sacks" },
+      "name": {
+        "uz": "Polipropilen qoplar",
+        "ru": "Полипропиленовые мешки",
+        "en": "Woven PP sacks"
+      },
       "desc": {
         "uz": "Un, shakar, guruch, sement va o'g'itlar uchun to'qilgan PP qoplar. Vkladishli variant ham bor.",
         "ru": "Тканые ПП-мешки для муки, сахара, риса, цемента и удобрений. Есть вариант с вкладышем.",
         "en": "Woven PP sacks for flour, sugar, rice, cement and fertiliser. Liner option available."
       },
-      "sizes": ["10 kg", "25 kg", "50 kg"],
-      "thickness": ["60 g/m²", "80 g/m²", "100 g/m²"],
+      "sizes": [
+        "10 kg",
+        "25 kg",
+        "50 kg"
+      ],
+      "thickness": [
+        "60 g/m²",
+        "80 g/m²",
+        "100 g/m²"
+      ],
       "colors": [
-        { "uz": "Oq", "ru": "Белый", "en": "White" },
-        { "uz": "Oq + vkladish", "ru": "Белый + вкладыш", "en": "White + liner" }
+        {
+          "uz": "Oq",
+          "ru": "Белый",
+          "en": "White"
+        },
+        {
+          "uz": "Oq + vkladish",
+          "ru": "Белый + вкладыш",
+          "en": "White + liner"
+        }
       ]
     },
     {
@@ -239,17 +376,38 @@
       "unit": "kg",
       "min": 50,
       "logo": false,
-      "name": { "uz": "Stretch va PE plyonka", "ru": "Стретч и ПЭ плёнка", "en": "Stretch & PE film" },
+      "name": {
+        "uz": "Stretch va PE plyonka",
+        "ru": "Стретч и ПЭ плёнка",
+        "en": "Stretch & PE film"
+      },
       "desc": {
         "uz": "Palletlarni o'rash uchun stretch plyonka va texnik polietilen plyonka (yeng, yarim-yeng).",
         "ru": "Стретч-плёнка для паллет и техническая ПЭ-плёнка (рукав, полурукав).",
         "en": "Stretch film for pallet wrapping and technical PE film (tubular, half-tubular)."
       },
-      "sizes": ["50 sm rulon", "100 sm rulon", "150 sm rulon"],
-      "thickness": ["17 mkm", "20 mkm", "23 mkm", "100 mkm"],
+      "sizes": [
+        "50 sm rulon",
+        "100 sm rulon",
+        "150 sm rulon"
+      ],
+      "thickness": [
+        "17 mkm",
+        "20 mkm",
+        "23 mkm",
+        "100 mkm"
+      ],
       "colors": [
-        { "uz": "Shaffof", "ru": "Прозрачный", "en": "Clear" },
-        { "uz": "Qora", "ru": "Чёрный", "en": "Black" }
+        {
+          "uz": "Shaffof",
+          "ru": "Прозрачный",
+          "en": "Clear"
+        },
+        {
+          "uz": "Qora",
+          "ru": "Чёрный",
+          "en": "Black"
+        }
       ]
     }
   ]
