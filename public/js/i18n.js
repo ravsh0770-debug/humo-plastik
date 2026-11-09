@@ -5,7 +5,7 @@ window.I18N = {
   uz: {
     "err.nobot": "Buyurtma yuborilmadi. Iltimos, qo'ng'iroq qiling: {phone}",
     "meta.title": "HUMO PLASTIK — selofan paketlar ishlab chiqaruvchidan",
-    "meta.desc": "Mayka, fasovka, logotipli paketlar, musor paketlari, qoplar va stretch plyonka — to'g'ridan-to'g'ri ishlab chiqaruvchidan ulgurji narxlarda.",
+    "meta.desc": "Mayka, fasovka, logotipli paketlar, musor paketlari, polietilen qoplar va stretch plyonka — to'g'ridan-to'g'ri ishlab chiqaruvchidan ulgurji narxlarda.",
     "money": "so'm",
     "unit.kg": "kg", "unit.dona": "dona", "unit.rulon": "rulon",
     "u.sm": "sm", "u.mkm": "mkm", "u.kg": "kg", "u.L": "L", "u.rulon": "rulon",
@@ -36,7 +36,7 @@ window.I18N = {
   ru: {
     "err.nobot": "Заказ не отправлен. Пожалуйста, позвоните: {phone}",
     "meta.title": "HUMO PLASTIK — полиэтиленовые пакеты от производителя",
-    "meta.desc": "Пакеты «майка», фасовочные, пакеты с логотипом, мусорные пакеты, мешки и стретч-плёнка — оптом напрямую от производителя.",
+    "meta.desc": "Пакеты «майка», фасовочные, пакеты с логотипом, мусорные пакеты, полиэтиленовые мешки и стретч-плёнка — оптом напрямую от производителя.",
     "nav.catalog": "Каталог", "nav.production": "Производство", "nav.calc": "Калькулятор", "nav.calcShort": "Расчёт",
     "nav.faq": "Вопросы", "nav.contact": "Контакты", "nav.home": "Главная", "nav.cart": "Корзина",
 
@@ -122,7 +122,7 @@ window.I18N = {
   en: {
     "err.nobot": "Your order could not be sent. Please call us: {phone}",
     "meta.title": "HUMO PLASTIK — plastic bags direct from the manufacturer",
-    "meta.desc": "T-shirt bags, produce bags, custom logo bags, garbage bags, sacks and stretch film — wholesale, direct from the factory.",
+    "meta.desc": "T-shirt bags, produce bags, custom logo bags, garbage bags, polyethylene sacks and stretch film — wholesale, direct from the factory.",
     "nav.catalog": "Catalog", "nav.production": "Production", "nav.calc": "Calculator", "nav.calcShort": "Calculate",
     "nav.faq": "FAQ", "nav.contact": "Contact", "nav.home": "Home", "nav.cart": "Cart",
 

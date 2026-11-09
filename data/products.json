@@ -189,14 +189,14 @@
       "min": 1000,
       "logo": false,
       "name": {
-        "uz": "Rasmli qoplar",
-        "ru": "Мешки с печатью",
-        "en": "Printed sacks"
+        "uz": "Polietilen qoplar (rasmli)",
+        "ru": "Полиэтиленовые мешки с печатью",
+        "en": "Printed polyethylene sacks"
       },
       "desc": {
-        "uz": "Logotip yoki rasm bosilgan qoplar — rangli va rangsiz variantlarda. Un, shakar, guruch, yem va boshqa mahsulotlar uchun.",
-        "ru": "Мешки с логотипом или изображением — цветные и бесцветные. Для муки, сахара, риса, кормов и других товаров.",
-        "en": "Sacks printed with your logo or image — coloured or uncoloured. For flour, sugar, rice, feed and other goods."
+        "uz": "Logotip yoki rasm bosilgan polietilen qoplar (LDPE/HDPE) — rangli va rangsiz variantlarda. Un, shakar, guruch, yem, granula va boshqa mahsulotlar uchun.",
+        "ru": "Полиэтиленовые мешки (ПВД/ПНД) с логотипом или изображением — цветные и бесцветные. Для муки, сахара, риса, кормов, гранул и других товаров.",
+        "en": "Polyethylene sacks (LDPE/HDPE) printed with your logo or image — coloured or uncoloured. For flour, sugar, rice, feed, pellets and more."
       },
       "sizes": [
         "10 kg",
@@ -272,14 +272,14 @@
       "min": 1000,
       "logo": false,
       "name": {
-        "uz": "Rasmsiz qoplar",
-        "ru": "Мешки без печати",
-        "en": "Plain sacks"
+        "uz": "Polietilen qoplar (rasmsiz)",
+        "ru": "Полиэтиленовые мешки без печати",
+        "en": "Plain polyethylene sacks"
       },
       "desc": {
-        "uz": "Pechatsiz oddiy qoplar — rangli va rangsiz variantlarda. Mustahkam, qadoqlash va saqlash uchun qulay.",
-        "ru": "Простые мешки без печати — цветные и бесцветные. Прочные, удобны для фасовки и хранения.",
-        "en": "Plain unprinted sacks — coloured or uncoloured. Strong and handy for packing and storage."
+        "uz": "Pechatsiz polietilen qoplar (LDPE/HDPE) — rangli va rangsiz (oq, shaffof) variantlarda. Mustahkam, namlik o'tkazmaydi.",
+        "ru": "Полиэтиленовые мешки (ПВД/ПНД) без печати — цветные и бесцветные (белые, прозрачные). Прочные, не пропускают влагу.",
+        "en": "Unprinted polyethylene sacks (LDPE/HDPE) — coloured or uncoloured (white, clear). Strong and moisture-proof."
       },
       "sizes": [
         "10 kg",
