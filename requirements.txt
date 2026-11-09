@@ -1,0 +1,1 @@
+# Tashqi kutubxonalar kerak emas — faqat Python standart kutubxonasi ishlatiladi.
