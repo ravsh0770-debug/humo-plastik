@@ -180,6 +180,162 @@
       ]
     },
     {
+      "id": "qop-rasmli",
+      "cat": "sanoat",
+      "img": "/img/qop-rasmli.jpg",
+      "badge": "new",
+      "price": 2500,
+      "unit": "dona",
+      "min": 1000,
+      "logo": false,
+      "name": {
+        "uz": "Rasmli qoplar",
+        "ru": "Мешки с печатью",
+        "en": "Printed sacks"
+      },
+      "desc": {
+        "uz": "Logotip yoki rasm bosilgan qoplar — rangli va rangsiz variantlarda. Un, shakar, guruch, yem va boshqa mahsulotlar uchun.",
+        "ru": "Мешки с логотипом или изображением — цветные и бесцветные. Для муки, сахара, риса, кормов и других товаров.",
+        "en": "Sacks printed with your logo or image — coloured or uncoloured. For flour, sugar, rice, feed and other goods."
+      },
+      "sizes": [
+        "10 kg",
+        "25 kg",
+        "50 kg",
+        {
+          "uz": "Maxsus o'lcham",
+          "ru": "Индивидуальный размер",
+          "en": "Custom size"
+        }
+      ],
+      "thickness": [
+        {
+          "uz": "1 rangli pechat",
+          "ru": "Печать в 1 цвет",
+          "en": "1-colour print"
+        },
+        {
+          "uz": "2–3 rangli pechat",
+          "ru": "Печать в 2–3 цвета",
+          "en": "2–3 colour print"
+        },
+        {
+          "uz": "4–6 rangli pechat",
+          "ru": "Печать в 4–6 цветов",
+          "en": "4–6 colour print"
+        }
+      ],
+      "colors": [
+        {
+          "uz": "Rangsiz (oq)",
+          "ru": "Без цвета (белый)",
+          "en": "Uncoloured (white)"
+        },
+        {
+          "uz": "Rangsiz (shaffof)",
+          "ru": "Без цвета (прозрачный)",
+          "en": "Uncoloured (clear)"
+        },
+        {
+          "uz": "Ko'k",
+          "ru": "Синий",
+          "en": "Blue"
+        },
+        {
+          "uz": "Yashil",
+          "ru": "Зелёный",
+          "en": "Green"
+        },
+        {
+          "uz": "Qizil",
+          "ru": "Красный",
+          "en": "Red"
+        },
+        {
+          "uz": "Sariq",
+          "ru": "Жёлтый",
+          "en": "Yellow"
+        },
+        {
+          "uz": "Qora",
+          "ru": "Чёрный",
+          "en": "Black"
+        }
+      ]
+    },
+    {
+      "id": "qop-rasmsiz",
+      "cat": "sanoat",
+      "img": "/img/qop-rasmsiz.jpg",
+      "price": 1800,
+      "unit": "dona",
+      "min": 1000,
+      "logo": false,
+      "name": {
+        "uz": "Rasmsiz qoplar",
+        "ru": "Мешки без печати",
+        "en": "Plain sacks"
+      },
+      "desc": {
+        "uz": "Pechatsiz oddiy qoplar — rangli va rangsiz variantlarda. Mustahkam, qadoqlash va saqlash uchun qulay.",
+        "ru": "Простые мешки без печати — цветные и бесцветные. Прочные, удобны для фасовки и хранения.",
+        "en": "Plain unprinted sacks — coloured or uncoloured. Strong and handy for packing and storage."
+      },
+      "sizes": [
+        "10 kg",
+        "25 kg",
+        "50 kg",
+        {
+          "uz": "Maxsus o'lcham",
+          "ru": "Индивидуальный размер",
+          "en": "Custom size"
+        }
+      ],
+      "thickness": [
+        "60 mkm",
+        "80 mkm",
+        "100 mkm",
+        "150 mkm"
+      ],
+      "colors": [
+        {
+          "uz": "Rangsiz (oq)",
+          "ru": "Без цвета (белый)",
+          "en": "Uncoloured (white)"
+        },
+        {
+          "uz": "Rangsiz (shaffof)",
+          "ru": "Без цвета (прозрачный)",
+          "en": "Uncoloured (clear)"
+        },
+        {
+          "uz": "Ko'k",
+          "ru": "Синий",
+          "en": "Blue"
+        },
+        {
+          "uz": "Yashil",
+          "ru": "Зелёный",
+          "en": "Green"
+        },
+        {
+          "uz": "Qizil",
+          "ru": "Красный",
+          "en": "Red"
+        },
+        {
+          "uz": "Sariq",
+          "ru": "Жёлтый",
+          "en": "Yellow"
+        },
+        {
+          "uz": "Qora",
+          "ru": "Чёрный",
+          "en": "Black"
+        }
+      ]
+    },
+    {
       "id": "musor",
       "cat": "sanoat",
       "img": "/img/musor.jpg",
