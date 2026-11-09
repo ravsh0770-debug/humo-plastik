@@ -71,6 +71,6 @@ Tekshirish: `https://SAYTINGIZ.vercel.app/api/health`
 
 ## Tahrirlash
 - Narxlar, mahsulotlar, telefon, manzil: `data/products.json`
-- Raqamlar (10+ yil va h.k.) va matnlar: `public/index.html` + `public/js/i18n.js`
+- Raqamlar (20+ yil va h.k.) va matnlar: `public/index.html` + `public/js/i18n.js`
 - Rasmlar: `public/img/` (Unsplash/Pexels bepul fotolar — o'z rasmlaringizga almashtirish tavsiya etiladi)
 - Narx har doim serverda `products.json` dan qayta hisoblanadi — brauzerdan soxtalashtirib bo'lmaydi.

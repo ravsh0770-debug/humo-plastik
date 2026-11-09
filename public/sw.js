@@ -1,5 +1,5 @@
 /* HUMO PLASTIK — service worker (oflayn ishlash va tez yuklanish) */
-const VERSION = "humo-v8";
+const VERSION = "humo-v9";
 const CORE = [
   "/", "/index.html", "/css/style.css", "/css/app.css","/js/i18n.js", "/js/app.js", "/manifest.webmanifest",
   "/img/favicon.svg", "/img/icon-192.png", "/img/hero.jpg",
