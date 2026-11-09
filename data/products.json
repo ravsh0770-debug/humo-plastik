@@ -328,47 +328,6 @@
       ]
     },
     {
-      "id": "qop",
-      "cat": "sanoat",
-      "img": "/img/qop.jpg",
-      "price": 2300,
-      "unit": "dona",
-      "min": 500,
-      "logo": true,
-      "name": {
-        "uz": "Polipropilen qoplar",
-        "ru": "Полипропиленовые мешки",
-        "en": "Woven PP sacks"
-      },
-      "desc": {
-        "uz": "Un, shakar, guruch, sement va o'g'itlar uchun to'qilgan PP qoplar. Vkladishli variant ham bor.",
-        "ru": "Тканые ПП-мешки для муки, сахара, риса, цемента и удобрений. Есть вариант с вкладышем.",
-        "en": "Woven PP sacks for flour, sugar, rice, cement and fertiliser. Liner option available."
-      },
-      "sizes": [
-        "10 kg",
-        "25 kg",
-        "50 kg"
-      ],
-      "thickness": [
-        "60 g/m²",
-        "80 g/m²",
-        "100 g/m²"
-      ],
-      "colors": [
-        {
-          "uz": "Oq",
-          "ru": "Белый",
-          "en": "White"
-        },
-        {
-          "uz": "Oq + vkladish",
-          "ru": "Белый + вкладыш",
-          "en": "White + liner"
-        }
-      ]
-    },
-    {
       "id": "plyonka",
       "cat": "sanoat",
       "img": "/img/plyonka.jpg",
