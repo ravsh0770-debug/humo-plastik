@@ -363,7 +363,7 @@
   function applySettings(s) {
     const tel = v => "tel:" + String(v).replace(/[^\d+]/g, "");
     if (s.phone) $$("[data-phone]").forEach(a => { a.textContent = s.phone; a.href = tel(s.phone); });
-    if (s.phone2) $$("[data-phone2]").forEach(a => { a.textContent = s.phone2; a.href = tel(s.phone2); });
+    $$("[data-phone2]").forEach(a => { a.hidden = !s.phone2; if (s.phone2) { a.textContent = s.phone2; a.href = tel(s.phone2); } });
     if (s.address) $$("[data-address]").forEach(a => a.textContent = L(s.address));
     if (s.hours) $$("[data-hours]").forEach(a => a.textContent = L(s.hours));
     if (s.telegram) $$("[data-tg]").forEach(a => a.href = s.telegram);
