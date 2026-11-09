@@ -5,7 +5,7 @@ window.I18N = {
   uz: {
     "err.nobot": "Buyurtma yuborilmadi. Iltimos, qo'ng'iroq qiling: {phone}",
     "meta.title": "HUMO PLASTIK — selofan paketlar ishlab chiqaruvchidan",
-    "meta.desc": "Mayka, fasovka, zip-lock, doy-pak, logotipli paketlar, musor paketlari va stretch plyonka — to'g'ridan-to'g'ri ishlab chiqaruvchidan ulgurji narxlarda.",
+    "meta.desc": "Mayka, fasovka, logotipli paketlar, musor paketlari va stretch plyonka — to'g'ridan-to'g'ri ishlab chiqaruvchidan ulgurji narxlarda.",
     "money": "so'm",
     "unit.kg": "kg", "unit.dona": "dona", "unit.rulon": "rulon",
     "u.sm": "sm", "u.mkm": "mkm", "u.kg": "kg", "u.L": "L", "u.rulon": "rulon",
@@ -36,13 +36,13 @@ window.I18N = {
   ru: {
     "err.nobot": "Заказ не отправлен. Пожалуйста, позвоните: {phone}",
     "meta.title": "HUMO PLASTIK — полиэтиленовые пакеты от производителя",
-    "meta.desc": "Пакеты «майка», фасовочные, зип-лок, дой-пак, пакеты с логотипом, мусорные пакеты и стретч-плёнка — оптом напрямую от производителя.",
+    "meta.desc": "Пакеты «майка», фасовочные, пакеты с логотипом, мусорные пакеты и стретч-плёнка — оптом напрямую от производителя.",
     "nav.catalog": "Каталог", "nav.production": "Производство", "nav.calc": "Калькулятор", "nav.calcShort": "Расчёт",
     "nav.faq": "Вопросы", "nav.contact": "Контакты", "nav.home": "Главная", "nav.cart": "Корзина",
 
     "hero.eyebrow": "Напрямую от производителя",
     "hero.title": "Полиэтиленовые пакеты <span class=\"hl\">по цене завода</span> — оптом и на заказ",
-    "hero.lead": "Пакеты «майка», фасовочные, зип-лок, дой-пак и пакеты с логотипом. Первичное сырьё, современное турецкое оборудование, готовый заказ — за 7–10 дней.",
+    "hero.lead": "Пакеты «майка», фасовочные и пакеты с логотипом. Первичное сырьё, современное турецкое оборудование, готовый заказ — за 7–10 дней.",
     "hero.cta1": "Смотреть каталог", "hero.cta2": "Узнать цену",
     "hero.t1": "Бесплатный дизайн", "hero.t2": "Бесплатная доставка по Ташкенту", "hero.t3": "Сертифицировано",
     "hero.fa_b": "300 т", "hero.fa_s": "производим в месяц",
@@ -82,7 +82,7 @@ window.I18N = {
 
     "faq.eyebrow": "Вопрос-ответ", "faq.title": "Частые вопросы",
     "faq.text": "Не нашли ответ? Напишите в Telegram или позвоните.", "faq.tg": "Написать в Telegram",
-    "faq.q1": "Какой минимальный заказ?", "faq.a1": "Зависит от товара: «майка» — от 50 кг, зип-лок — от 1000 шт, пакеты с логотипом — от 1000 шт. Указано в карточке каждого товара.",
+    "faq.q1": "Какой минимальный заказ?", "faq.a1": "Зависит от товара: «майка» — от 50 кг, мусорные пакеты — от 100 рулонов, пакеты с логотипом — от 1000 шт. Указано в карточке каждого товара.",
     "faq.q2": "Сколько времени занимает изготовление?", "faq.a2": "Срок производства — 7–10 дней (для пакетов с логотипом — после утверждения макета). Точную дату менеджер назовёт при подтверждении заказа.",
     "faq.q3": "Какие способы оплаты?", "faq.a3": "Наличные, банковская карта (Uzcard / Humo), Click, Payme и перечисление (счёт-фактура с НДС).",
     "faq.q4": "Доставляете в регионы?", "faq.a4": "Да. По Ташкенту — бесплатно, в регионы отправляем надёжными транспортными компаниями.",
@@ -122,13 +122,13 @@ window.I18N = {
   en: {
     "err.nobot": "Your order could not be sent. Please call us: {phone}",
     "meta.title": "HUMO PLASTIK — plastic bags direct from the manufacturer",
-    "meta.desc": "T-shirt bags, produce bags, zip-lock bags, stand-up pouches, custom logo bags, garbage bags and stretch film — wholesale, direct from the factory.",
+    "meta.desc": "T-shirt bags, produce bags, custom logo bags, garbage bags and stretch film — wholesale, direct from the factory.",
     "nav.catalog": "Catalog", "nav.production": "Production", "nav.calc": "Calculator", "nav.calcShort": "Calculate",
     "nav.faq": "FAQ", "nav.contact": "Contact", "nav.home": "Home", "nav.cart": "Cart",
 
     "hero.eyebrow": "Direct from the manufacturer",
     "hero.title": "Plastic bags <span class=\"hl\">at factory prices</span> — wholesale and made to order",
-    "hero.lead": "T-shirt bags, produce bags, zip-lock bags, stand-up pouches and custom logo bags. Virgin material, modern Turkish machinery and orders ready in 7–10 days.",
+    "hero.lead": "T-shirt bags, produce bags and custom logo bags. Virgin material, modern Turkish machinery and orders ready in 7–10 days.",
     "hero.cta1": "View catalog", "hero.cta2": "Get a quote",
     "hero.t1": "Free design", "hero.t2": "Free delivery in Tashkent", "hero.t3": "Certified",
     "hero.fa_b": "300 t", "hero.fa_s": "produced every month",
@@ -168,7 +168,7 @@ window.I18N = {
 
     "faq.eyebrow": "FAQ", "faq.title": "Frequently asked questions",
     "faq.text": "Didn't find an answer? Message us on Telegram or give us a call.", "faq.tg": "Message on Telegram",
-    "faq.q1": "What is the minimum order?", "faq.a1": "It depends on the product: T-shirt bags from 50 kg, zip-lock from 1,000 pcs, logo bags from 1,000 pcs. Each product card shows its minimum.",
+    "faq.q1": "What is the minimum order?", "faq.a1": "It depends on the product: T-shirt bags from 50 kg, garbage bags from 100 rolls, logo bags from 1,000 pcs. Each product card shows its minimum.",
     "faq.q2": "How long does production take?", "faq.a2": "Production takes 7–10 days (for logo bags, after the artwork is approved). Your manager will confirm the exact date when confirming the order.",
     "faq.q3": "What payment methods do you accept?", "faq.a3": "Cash, bank cards (Uzcard / Humo), Click, Payme and bank transfer (VAT invoice).",
     "faq.q4": "Do you deliver to the regions?", "faq.a4": "Yes. Delivery in Tashkent is free; we ship to the regions via trusted freight companies.",
