@@ -82,6 +82,56 @@ class ApiError(ValueError):
 
 
 # ---------------------------------------------------------------- saqlash
+class SupabaseStore:
+    """Supabase (PostgREST). Buyurtmalar, adminlar va rate-limit Postgres bazada saqlanadi."""
+    kind = "supabase"
+
+    def __init__(self, url, key):
+        self.base, self.key = url.rstrip("/") + "/rest/v1", key
+
+    def req(self, method, path, body=None, prefer=None):
+        h = {"apikey": self.key, "Content-Type": "application/json"}
+        if self.key.startswith("eyJ"):  # eski service_role JWT kaliti
+            h["Authorization"] = f"Bearer {self.key}"
+        if prefer:
+            h["Prefer"] = prefer
+        data = json.dumps(body, ensure_ascii=False).encode() if body is not None else None
+        r = urllib.request.Request(self.base + path, data=data, headers=h, method=method)
+        with urllib.request.urlopen(r, timeout=8) as resp:
+            raw = resp.read()
+            return json.loads(raw) if raw else None
+
+    @staticmethod
+    def _order(row):
+        return {k: row[k] for k in ("id", "created", "status", "lang", "customer", "items", "total")}
+
+    def admins(self):
+        return {int(r["chat_id"]) for r in (self.req("GET", "/admins?select=chat_id") or [])}
+
+    def add_admin(self, cid):
+        self.req("POST", "/admins", {"chat_id": cid}, prefer="resolution=ignore-duplicates,return=minimal")
+
+    def next_id(self):
+        return int(self.req("POST", "/rpc/next_order_id", {}))
+
+    def save(self, o):
+        self.req("POST", "/orders", self._order(o), prefer="return=minimal")
+
+    def get(self, oid):
+        rows = self.req("GET", f"/orders?id=eq.{int(oid)}&select=*") or []
+        return self._order(rows[0]) if rows else None
+
+    def update(self, o):
+        self.req("PATCH", f"/orders?id=eq.{int(o['id'])}", {"status": o["status"]}, prefer="return=minimal")
+
+    def recent(self, n):
+        rows = self.req("GET", f"/orders?select=*&order=created_at.desc&limit={int(n)}") or []
+        return [self._order(r) for r in rows][::-1]
+
+    def hit(self, ip, window=600):
+        return int(self.req("POST", "/rpc/rate_hit", {"p_ip": ip, "p_window": window}))
+
+
 class RedisStore:
     """Upstash / Vercel KV (REST). Vercel'da buyurtmalar tarixi uchun."""
     kind = "redis"
@@ -108,6 +158,9 @@ class RedisStore:
         self.cmd("SET", f"humo:order:{o['id']}", json.dumps(o, ensure_ascii=False))
         self.cmd("LPUSH", "humo:orders", o["id"])
         self.cmd("LTRIM", "humo:orders", 0, 1999)
+
+    def update(self, o):
+        self.cmd("SET", f"humo:order:{o['id']}", json.dumps(o, ensure_ascii=False))
 
     def get(self, oid):
         v = self.cmd("GET", f"humo:order:{oid}")
@@ -199,6 +252,7 @@ class NoStore:
     def next_id(self): return int(now().strftime("%d%H%M%S")) % 1000000
     def save(self, o): pass
     def get(self, oid): return None
+    def update(self, o): pass
     def recent(self, n): return []
 
     def hit(self, ip, window=600):
@@ -209,6 +263,10 @@ class NoStore:
 
 
 def make_store():
+    s_url = os.environ.get("SUPABASE_URL")
+    s_key = os.environ.get("SUPABASE_SECRET_KEY") or os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
+    if s_url and s_key:
+        return SupabaseStore(s_url, s_key)
     url = os.environ.get("KV_REST_API_URL") or os.environ.get("UPSTASH_REDIS_REST_URL")
     tok = os.environ.get("KV_REST_API_TOKEN") or os.environ.get("UPSTASH_REDIS_REST_TOKEN")
     if url and tok:
@@ -356,10 +414,7 @@ def handle_update(u):
             o = store.get(oid)
             if o:
                 o["status"] = status
-                if isinstance(store, FileStore):
-                    store.update(o)
-                else:
-                    store.cmd("SET", f"humo:order:{oid}", json.dumps(o, ensure_ascii=False))
+                store.update(o)
         except Exception as e:
             print(f"[store] status xato: {e}")
         text, ents = relabel(msg, STATUS[status])
@@ -406,7 +461,7 @@ def handle_update(u):
     elif cmd == "/orders" and is_admin:
         orders = store.recent(5)
         if not orders:
-            send("Hozircha saqlangan buyurtmalar yo'q." + ("\n(Tarix uchun Upstash Redis ulang — README)" if store.kind == "none" else ""))
+            send("Hozircha saqlangan buyurtmalar yo'q." + ("\n(Tarix uchun Supabase ulang — README)" if store.kind == "none" else ""))
         for o in orders:
             tg("sendMessage", chat_id=cid, text=order_text(o), parse_mode="HTML", reply_markup=order_keyboard(o["id"]))
     elif cmd == "/stats" and is_admin:
